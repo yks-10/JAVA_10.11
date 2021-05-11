@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNIT THREE</title>
+
+<!-- CSS -->
+<style>
+
+
+ nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:20px;
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 100px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 3px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+</style>
+</head>
+<header>
+ <H1><b>UNIT 3</b></p>
+</header>
+<p>             </p>
+<body>
+
+<!-- HTML -->
+<div class="sidenav">
+  <div class="myBox">
+      <p><a href="#C1">Enumeration </a></p>
+      <p><a href="#C2">Wrapper class</a></p>
+      <p><a href="#C3"> Generics</a></p>
+      <p><a href="#C4">Collection</a></p>
+      <p><a href="#C5">Iostreams</a></p>
+      <br>
+      <p><a href="index.html"><b>HOME</b></a></p>
+  </div>
+</div>
+<div.c>
+<p>               </p>
+
+<div class="main">
+<footer>
+<h2 id="C1">ENUMERATION</h2>
+</footer>  
+<ul>
+   <ul> 
+
+<h1><b>Enum</b></h1>
+  <p>The Enum in Java is a data type which contains a fixed set of constants.Java Enums can be thought of as classes which have a fixed set of constants (a variable that does not change). <br>The Java enum constants are static and final implicitly. It is available since JDK 1.5.Enums are used to create our own data type like classes. The enum data type (also known as Enumerated Data Type) is used to define an enum in Java. Unlike C/C++, enum in Java is more powerful. Here, we can define an enum either inside the class or outside the class.</br>
+Java Enum internally inherits the Enum class, so it cannot inherit any other class, but it can implement many interfaces.</p>
+  <p><b>Points to remember for Java Enum</b></p>
+<p><li>Enum improves type safety
+<br><li>Enum can be easily used in switch
+<br><li>Enum can be traversed
+<br><li>Enum can have fields, constructors and methods
+<br><li>Enum may implement many interfaces but cannot extend any class because it internally extends Enum class
+</p>
+<p><b>Program</b></p>
+<p><strong>Class Enum<br>
+{<br>//defining the enum inside the class 
+<br>
+  public enum Season { WINTER, SPRING, SUMMER, FALL }<br>
+//main method  <br>  
+ 
+      public static void main(String[] args) 
+  <br>
+//traversing the enum <br>
+for (Season s : Season.values()) <br>
+System.out.println(s);<br>
+}}
+</strong></p>
+<p><b>Output</b></p>
+<ul><p>WINTER<br>
+SPRING<br>
+SUMMER<br>
+FALL
+</ul><br>
+<footer>
+<h2 id="C2">WRAPPER CLASS</h2>
+</footer>  
+<h1><b>Wrapper class</b></h1>
+<p><li>A Wrapper class is a class whose object wraps or contains a primitive data types. 
+<li>When we create an object to a wrapper class, it contains a field.  in this field, we can store a primitive data types
+</p>
+<p><b>Use / Need of Wrapper classes in Java</b><p>
+<p><b>1.Collection Framework:</b> Java collection framework works with objects only. All classes of the collection framework (ArrayList, LinkedList, Vector, HashSet, LinkedHashSet, TreeSet, PriorityQueue, ArrayDeque, etc.) deal with objects only.<br>
+
+<b>2.Change the value in Method:</b> Java supports only call by value. So, if we pass a primitive value, it will not change the original value. But, if we convert the primitive value in an object, it will change the original value
+<br><b>3.Serialization:</b> We need to convert the objects into streams to perform the serialization.
+<br><b>4.Synchronization: </b>Java synchronization works with objects in Multithreading.
+<br><b>5.java.util package: </b>The java.util package provides the utility classes to deal with objects.
+<p><b>Primitive type and their equal wrapper class</b><p>
+
+<table>
+  <tr>
+   <th>PRIMITIVE DATA TYPE</th>
+   <th>WRAPPER CLASS</th>
+  </tr>
+  <tr>
+   <th>char</th>
+   <th>Character</th>
+  </tr>
+  <tr>
+    <th>byte</th>
+    <th>Byte</th>
+   </tr>
+  <tr>
+    <th>short</th>
+    <th>Short</th>
+  </tr>
+  <tr>
+    <th>long</th>
+    <th>Long<th>
+   </tr>
+  <tr>
+    <th>float</th>
+    <th>Float</th>
+  </tr>
+  <tr>
+    <th>double</th>
+     <th>Double</th>
+  </tr>
+  <tr> 
+    <th>boolean</th>
+     <th>Boolean</th>
+  </tr>
+<table>
+
+
+
+<h1>Autoboxing</h1>
+<p>The automatic conversion of primitive data type into its corresponding wrapper class is known as autoboxing, for example, byte to Byte, char to Character, etc.
+</p>
+<p><b>Example Program<br><br>public class WrapperExample1{ <br> 
+public static void main(String args[]){  <br>
+//Converting int into Integer  <br>
+int a=20;  <br>
+Integer i=Integer.valueOf(a);				   		                   //converting int into Integer explicitly  
+
+<br>Integer j=a;   		//autoboxing, now compiler will write Integer.valu	eOf(a) internally  
+
+<br>  System.out.println(a+" "+i+" "+j);  
+<br>}}</b></p>
+<h1>unboxing</h1>
+<p><li>The automatic conversion of wrapper type into its corresponding primitive type is known as unboxing.
+<li> It is the reverse process of autoboxing. 
+</p>
+<p><b>Example Program<br><br>public class WrapperExample2{ <br>   
+public static void main(String args[]){ <br>   
+	
+Integer a=new Integer(3);<br>    
+int i=a.intValue();      //converting Integer to int explicitly  <br>
+				
+int j=a;	//unboxing, now compiler will write a.intValue() internally    
+    
+<br>System.out.println(a+" "+i+" "+j);    
+<br>}} 
+</p>
+<footer>
+<h2 id="C3">GENERICS</h2>
+</footer>
+<h1><b>Generic</b></b></h1>
+<li>It would be nice if we could write a single sort method that could sort the elements in an Integer array, a String array, or an array of any type that supports ordering.
+<li>Using Java Generic concept, we might write a generic method for sorting an array of objects, then invoke the generic method with Integer arrays, Double arrays, String arrays and so on, to sort the array elements.
+<br><br>
+<li>The idea is to allow type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces.
+<br><br>1. Generic Class
+<br>2. Generic Methods
+<br>3. Generic Interface
+<h1>Generic Class</h1>
+<li>A class that can refer to any type is known as generic class. 
+<li>In generic we are associating type parameter to class such type of parameterized class is known as generic or template class
+
+<li>Generic class can have one or more type parameters separated by commas. These classes are known as parameterized classes or parameterized types because they accept one or more parameters.
+<br><b>To Create a generic class
+</b><br>	
+class classname <Typeparameters>
+<br>	Eg:    class Test<T>
+
+<br><b>To create an instance of generic class :</b>
+<br>BaseType <Type> obj = new BaseType <Type>()
+<p><b>Example program</b></p>
+<p>class MyGen<T><br>{ <br> 
+T obj;  <br>
+void add(T obj)<br>{<br>this.obj=obj;<br>}  
+<br>T get()<br>{<br>return obj;<br>}  
+<br>} 
+<br>class TestGenerics3<br>{  
+<br>public static void main(String args[])<br>{  
+<br>MyGen<Integer> m=new MyGen<Integer>();  
+<br>m.add(2);  
+<br>//m.add("vivek");//Compile time error  
+<br>System.out.println(m.get());  
+<br>}<br>}   </p>
+<p><b>Output<br>2</b></p>
+<h1>Generic method</h1>
+<p><li>Like generic class, we can create generic method that can accept any type of argument.
+</p>
+<br><b>Example program</b>
+<br><ul>
+<br>public class TestGenerics4<br>{  <br>
+  
+   public static < E > void printArray(E[] elements)<br> {  <br>
+        for ( E element : elements)<br>{    <br>      
+            System.out.println(element ); <br> 
+         } <br> 
+         System.out.println();  <br>
+    }  <br>
+    public static void main( String args[] ) <br>{  <br>
+        Integer[] intArray = { 10, 20, 30, 40, 50 }; <br> 
+        Character[] charArray = { 'J', 'A', 'V', 'A', 'T','P','O','I','N','T' };<br>  
+  
+        System.out.println( "Printing Integer Array" );<br>  
+        printArray( intArray  );   <br>
+  
+       System.out.println( "Printing Character Array" ); <br> 
+        printArray( charArray ); <br>  
+    } <br>  
+}  <br></ul>
+<br><b>Output</b><br><br>
+Printing Integer Array<br>
+10<br>
+20<br>
+30<br>
+40<br>
+50<br>
+Printing Character Array<br>
+J<br>
+A<br>
+V<br>
+A<br>
+T<br>
+P<br>
+O<br>
+I<br>
+N<br>
+T<br>
+<h1>Generic Interface</h2>
+<p>Generic Interfaces work same as Generic Classes. generic interface that declares the method called myMethod( ). In general, a generic interface is declared in the same way as is a generic class. ... Of course, if a class implements a specific type of generic interface, then the implementing class does not need to be generic.
+<p><b>Example program</b><p>
+<p>interface People<br> {  
+    <br>name: string  
+    <br>age: number  <br>
+} 
+<br>interface Celebrity extends People {  
+   <br> profession: string <br>  
+}  <br> 
+function printName<T extends Celebrity>(theInput: T): void  {  <br> 
+    console.log(`Name: ${theInput.name} \nAge: ${theInput.age} \nProfession: ${theInput.profession}`);  
+<br> }  
+<br> let player: Celebrity = { 
+    <br> name: 'Rohit Sharma', age: 30, profession: 'Cricket Player'  
+} <br>  
+printName(player);<br>
+<br><b>Output</b><br>
+Name: Rohit Sharma<br> 
+Age: 30<br>
+Profession: Cricket player<br>
+<footer>
+<h2  id="C4">COLLECTION</h2>
+</footer>
+<h1>Collection</h1>
+<p><li>The Java Collections Framework is a collection of interfaces and classes which helps in storing and processing the data efficiently. 
+<li>The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+<li>Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+<br><img src="Picture1.png" height="500" width="600">
+</p>
+</p>
+<br><b>Useful methods of collections framework </b>
+<ol><p>
+<li>add():  It is used to insert an element in this collection.<br>
+<li>remove(): It is used to delete an element from the collection.<br>
+<li>Size(): It returns the total number of elements in the collection.<br> 
+<li>Clear(): It removes the total number of elements from the collection.<br>
+<li>Contains(): It is used to search an element.<br>
+</ol></p>
+<h1>List</h1>
+A List is an ordered Collection (sometimes called a sequence). Lists may contain duplicate elements. Elements can be inserted or accessed by their position in the list, using a zero-based index.
+<br><b>Syntax:</b><br>
+<li>List <data-type> list1= new ArrayList(); 
+<li>List <data-type> list2 = new LinkedList();  <br>
+<li>List <data-type> list3 = new Vector();<br>
+<b>Array List</b><br>
+<br><li>It implements the List interface. It uses a dynamic array to store the duplicate element of different data types.
+<br><li> Java ArrayList class can contain duplicate elements.
+<br><li>Java ArrayList class maintains insertion order.
+<br><li>Java ArrayList class is non synchronized.
+<br><li>Java ArrayList allows random access because array works at the index basis.
+<br><li>In Java ArrayList class, manipulation is slow because a lot of shifting needs to occur if any element is removed from the array list.
+<br><b>Useful methods of ArrayList class</b>
+<br><li>get(): It is used to fetch the element from the particular position of the list.
+<br><li>isEmpty(): It returns true if the list is empty, otherwise false.
+<br><b>Example program</b>
+<br>import java.util.ArrayList;
+
+<br>public class AList {
+<br>public static void main(String[] args) {
+<br>ArrayList<String> al=new ArrayList<String>();
+<br>al.add("Gowtham");
+<br>al.add("hhh");
+<br>al.add(1,"rag");
+<br>System.out.println(al);
+<br>System.out.println(al.size());
+<br>for(int i=0;i<al.size();i++)
+<br>{
+<br>System.out.println(al.get(i));
+<br>}
+<br>al.clear();
+<br>System.out.println(al.contains(10));
+
+<br>System.out.println(al);
+<br>}
+<br>}
+<br><b>Linked List</b><br>
+<li>LinkedList is a doubly-linked list implementation of the List and Deque interfaces.
+<li>The important points about Java LinkedList are:
+<ul><ol><li>Java LinkedList class can contain duplicate elements.
+<li>Java LinkedList class maintains insertion order.
+<li>Java LinkedList class is non synchronized.
+<li>In Java LinkedList class, manipulation is fast because no shifting needs to occur.
+<li>Java LinkedList class can be used as a list, stack or queue.
+</ul></ol>
+<br><b>LinkedList Method</b><ul>
+<br><li>add() -It is used to append the specified element to the end of a list
+<br><li>add(int index, E element) -It is used to insert the specified element at the specified position index in a list.
+<br><li>addFirst() -It is used to insert the given element at the beginning of a list.
+<br><li>addLast() -It is used to append the given element to the end of a list
+<br><li>peek() - It retrieves the first element of a list
+<br><li>peekLast() - It retrieves the last element of a list or returns null if a list is empty</li>
+</ul><br><br><b>Example Program</b><br><br>
+import java.util.LinkedList;
+<br>public class LList {
+<br>public static void main(String[] args) {
+<br>LinkedList<String>ll=new LinkedList<String>();
+<br>ll.add("raja");
+<br>ll.add(1,"kavin");
+<br>System.out.println(ll);
+<br>ll.addFirst("bharathi");
+<br>ll.addLast("arun");
+<br>System.out.println(ll);
+<br>System.out.println(ll.peekFirst());
+<br>System.out.println(ll.peekLast());
+<br>}
+<br>}<br>
+<br><b>Vector List</b><br><br>
+<li>Like ArrayList it also maintains insertion order but it is rarely used in non-thread environment as it is synchronized and due to which it gives poor performance in searching, adding, delete and update of its elements.
+<br><br><b>Vector Method</b>
+<br><li>add()
+<br><li>get()
+<br><li>contains()
+<br><li>firstElement()
+<br><li>lastElement()<p>
+<br><b>Example program</b><br>
+<br><b>import java.util.Vector;</b>
+<br>public class VList {
+<br>public static void main(String[] args) {
+<br>Vector v=new Vector();
+<br>v.add("hello");
+<br>v.add("terror");
+<br>v.add("CSE B");
+<br>System.out.println(v);
+<br>System.out.println(v.get(1));
+<br>if (v.contains("terror"))
+<br>{  <br>            System.out.println("yes terror is availabe");
+<br>}<br>
+else<br>
+{<br>             System.out.println("element not forund");
+<br>}<br>
+System.out.println("First elemnt "+v.firstElement());
+<br>System.out.println("last elemets "+v.lastElement());
+<br>}
+<br>}<br>
+</b>
+</p>
+<h1>Set</h1>
+<br><b>Hashset</b><br>
+Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
+<ul><br><li>HashSet stores the elements by using a mechanism called hashing.
+<br><li>HashSet contains unique elements only.
+<br><li>HashSet allows null value.
+<br><li>HashSet class is non synchronized.
+<br><li>HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+<br><li>HashSet is the best approach for search operations.
+<br><li>The initial default capacity of HashSet is 16, and the load factor is 0.75
+</ul>
+<br><b>Example program<br></b>
+import java.util.*;  
+<br>class HashSet1{  
+<br> public static void main(String args[]){  
+ <br> //Creating HashSet and adding elements  
+ <br>   HashSet<String> set=new HashSet();  
+      <br>    set.add("One");    
+      <br>    set.add("Two");    
+      <br>    set.add("Three");   
+      <br>    set.add("Four");  
+      <br>    set.add("Five");  
+      <br>   Iterator<String> i=set.iterator();   
+    <br>      while(i.hasNext())  
+    <br>     {  
+    <br>         System.out.println(i.next());  
+    <br>     }  
+ <br>}  
+<br>}  <br>
+<br><b>Output</b><br>
+ Five One Four Two Three<br>
+<br><b>Method</b><br><br>
+<li>add()
+<li>remove();
+<li>removeAll();
+<li>Converting set into array:
+Array String[] a = new String[hset.size()]; hset.toArray(a);<br><br>
+<b>Linked Hashset<br></b>
+<P><ul>Java LinkedHashSet class is a Hashtable and Linked list implementation of the set interface. It inherits HashSet class and implements Set interface.
+</ul>
+<br><b>Example Program</b>
+<ul>
+import java.util.*;  
+<br>class LinkedHashSet1{  
+ <br>public static void main(String args[]){  
+    <br>    LinkedHashSet<String> set=new LinkedHashSet();  
+    <br>           set.add("One");    
+    <br>           set.add("Two");    
+    <br>           set.add("Three");   
+    <br>           set.add("Four");  
+    <br>           set.add("Five");  
+
+    <br>           Iterator<String> i=set.iterator();  
+    <br>           while(i.hasNext())  
+    <br>           {  
+    <br>          System.out.println(i.next());  
+    <br>           }  
+<br> }  
+<br>}  
+<br></ul>
+<br>
+<b>Output</b><br>
+One Two Three Four Five<br><br>
+<b>TreeSet</b>
+<br><br><li>Java TreeSet class implements the Set interface that uses a tree for storage. 
+<br><li>It inherits AbstractSet class and implements the NavigableSet interface. The objects of the TreeSet class are stored in ascending order.
+<br><li>Java TreeSet class contains unique elements only like HashSet.
+<br><li>Java TreeSet class access and retrieval times are quiet fast.
+<br><li>Java TreeSet class doesn't allow null element.
+<br><li>Java TreeSet class is non synchronized.
+<br><li>Java TreeSet class maintains ascending order.
+<br><b>Example Program</b>
+<ul><br>import java.util.*;  
+<br>class TreeSet1{  
+<br> public static void main(String args[]){  
+ <br> //Creating and adding elements  
+ <br> TreeSet<String> al=new TreeSet<String>();  
+<br>  al.add("Ravi");  
+<br>  al.add("Vijay");  
+<br>  al.add("Ravi");  
+<br>  al.add("Ajay");  
+<br>  //Traversing elements  
+<br>  Iterator<String> itr=al.iterator();  
+<br>  while(itr.hasNext()){  
+<br>   System.out.println(itr.next());  
+<br>  }  
+<br> }  
+<br>}</ul> <br><br>
+<b>Output</b><br>
+Ajay Ravi Vijay</ul>
+<h1 >Map</h1>
+<li>A map contains values on the basis of key, i.e. key and value pair. Each key and value pair is known as an entry. A Map contains unique keys
+<br><li>A Map doesn't allow duplicate keys, but you can have duplicate values. HashMap and LinkedHashMap allow null keys and values, but TreeMap doesn't allow any null key or value.
+<br><br><b>HashMap</b><br>
+<br><li>Java HashMap class implements the map interface by using a hash table. It inherits AbstractMap class and implements Map interface.
+<br><li>Java HashMap class contains values based on the key.
+<br><li>Java HashMap class contains only unique keys.
+<br><li>Java HashMap class may have one null key and multiple null values.
+<br><li>Java HashMap class is non synchronized.
+<br><li>Java HashMap class maintains no order.
+<br><li>The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+<br><br><b>Example program</b><br>
+<br>    import java.util.*;  
+<br>    public class HashMap2 {  
+  <br>    public static void main(String args[]) {  
+    <br>    HashMap<Integer,String> map=new HashMap<Integer,String>();          
+     <br>   map.put(100,"Amit");    
+     <br>   map.put(101,"Vijay");    
+     <br>   map.put(102,"Rahul");  
+     <br>   map.put(103, "Gaurav");  
+   <br>   System.out.println("Initial list of elements: "+map);  
+   <br>   //key-based removal  
+   <br>   map.remove(100);  
+   <br>   System.out.println("Updated list of elements: "+map);  
+   <br>   //value-based removal  
+   <br>   map.remove(101);  
+   <br>   System.out.println("Updated list of elements: "+map);  
+   <br>   //key-value pair based removal  
+   <br>   map.remove(102, "Rahul");  
+  <br>    System.out.println("Updated list of elements: "+map);  
+  <br>   }   <br>   }<br>
+<br><b>Linked Hashmap
+</b><br><br>
+<li>Java LinkedHashMap class is Hashtable and Linked list implementation of the Map interface, with predictable iteration order. 
+
+<br><li>It inherits HashMap class and implements the Map interface.
+<br><li>Java LinkedHashMap contains values based on the key.
+<br><li>Java LinkedHashMap contains unique elements.
+<br><li>Java LinkedHashMap may have one null key and multiple null values.
+<br><li>Java LinkedHashMap is non synchronized.
+<br><li>Java LinkedHashMap maintains insertion order.
+<br><li>The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+<br><br><b>Example Program</b>
+<br><br>   import java.util.*;  
+<br>   class LinkedHashMap2{  
+ <br>  public static void main(String args[]){  
+  <br> LinkedHashMap<Integer, String> map = new LinkedHashMap<Integer, String>();           
+  <br>   map.put(100,"Amit");    
+  <br>   map.put(101,"Vijay");    
+ <br>    map.put(102,"Rahul");    
+  <br>   //Fetching key  
+   <br>  System.out.println("Keys: "+map.keySet());  
+   <br>  //Fetching value  
+    <br> System.out.println("Values: "+map.values());  
+   <br>  //Fetching key-value pair  
+    <br> System.out.println("Key-Value pairs: "+map.entrySet());  
+<br> }  
+<br>}  <br>
+<br><b>Output</b><br><br>
+
+Keys: [100, 101, 102] Values: [Amit, Vijay, Rahul] Key-Value pairs: [100=Amit, 101=Vijay, 102=Rahul]
+<br>
+<br><b>TreeMap</b><br>
+<br><li>Java TreeMap class is a red-black tree based implementation. It provides an efficient means of storing key-value pairs in sorted order.
+
+<br><li>Java TreeMap contains values based on the key. It implements the NavigableMap interface and extends AbstractMap class.
+<br><li>Java TreeMap contains only unique elements.
+<br><li>Java TreeMap cannot have a null key but can have multiple null values.
+<br><li>Java TreeMap is non synchronized.
+<br><li>Java TreeMap maintains ascending order.<br>
+<br><b>Example program</b><br>
+<ul>import java.util.*;  
+<br>class TreeMap1{  
+<br> public static void main(String args[]){  
+<br>  TreeMap<Integer,String> map=new TreeMap<Integer,String>();    
+<br>      map.put(100,"Amit");    
+<br>      map.put(102,"Ravi");    
+<br>      map.put(101,"Vijay");    
+<br>      map.put(103,"Rahul");    
+        
+<br>      for(Map.Entry m:map.entrySet()){    
+ <br>      System.out.println(m.getKey()+" "+m.getValue());    
+<br>      }    
+<br> }  
+<br>}</ul> <br><br>
+<b>Output</b><br>
+<br>Output:100 Amit 101 Vijay 102 Ravi 103 Rahul<br>
+<br><footer>
+<h2 id="C5">IOSTREAMS</h2>
+</footer>
+<br><b>Java I/O(Input and Output)</b><br><br>
+Java I/O (Input and Output) is used to process the input and produce the output.
+Java uses the concept of a stream to make I/O operation fast. The java.io package contains all the classes required for input and output operations.
+We can perform file handling in Java by Java I/O API.
+<br>
+<br><b>Streams</b><br>
+<br>A stream is a sequence of data. In Java, a stream is composed of bytes. It's called a stream because it is like a stream of water that continues to flow.
+<br>In Java, 3 streams are created for us automatically. All these streams are attached with the console.
+<br><br><ul>1) System.out: standard output stream
+<br>2) System.in: standard input stream
+<br>3) System.err: standard error stream</ul>
+<br>Let's see the code to print output and an error message to the console.
+<br><ul>1.System.out.println("simple message");  
+<br>2.System.err.println("error message"); </ul> 
+<br>Let's see the code to get input from console.
+<br><ul>1.int i=System.in.read();//returns ASCII code of 1st character  
+<br>System.out.println((char)i);//will print the character</ul> 
+<br><b>OutputStream vs InputStream</b><br>
+<br>The explanation of OutputStream and InputStream classes are given below:
+
+<br><br><b>OutputStream</b><br>
+<br>Java application uses an output stream to write data to a destination; it may be a file, an array, peripheral device or socket.
+<br>
+<br><b>InputStream</b><br><br>
+Java application uses an input stream to read data from a source; it may be a file, an array, peripheral device or socket.
+<br>Let's understand the working of Java OutputStream and InputStream by the figure given below.
+<br><b></b><br>
+<img src="2.png"><br>
+<br><b>OutputStream class</b><br>
+<br>OutputStream class is an abstract class. It is the superclass of all classes representing an output stream of bytes. An output stream accepts output bytes and sends them to some sink.
+<br><br>
+<b></b>Useful methods of OutputStream<br>
+<img src="out.jpg"><br>
+<br><b>OutputStream Hierarchy</b><br>
+<img src="3.png"><br>
+<br><b>InputStream class</b><br>
+<br>InputStream class is an abstract class. It is the superclass of all classes representing an input stream of bytes.<br>
+<br><b>Useful methods of InputStream</b><br>
+<img src ="in.jpg" height="250" width="700">
+<br><br><b>InputStream Hierarcy </b><br>
+<img src="4.png"><hr>
+</div>
+</body>
+</html>

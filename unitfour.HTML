@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNIT FOUR</title>
+
+<!-- CSS -->
+<style>
+
+
+ nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:20px;
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 100px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 3px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+</style>
+</head>
+<header>
+ <H1><b>UNIT 4</b></p>
+</header>
+<p>             </p>
+<body>
+
+<!-- HTML -->
+<div class="sidenav">
+  <div class="myBox">
+        <p><a href="#C1">EXCEPTION HANDLING</a></p>
+        <p><a href="#C2">EXCEPTION HIERARCHY</a></p>
+        <p><a href="#C3">THROWS</a></p>
+        <p><a href="#C4">FINALLY</a></p>
+        <p><a href="#C5">BUILT IN EXCEPTION</a></p>
+        <p><a href="#C6">USER DEFINED EXCEPTION</a></p>
+        <p><a href="#C7">CHAINED EXCEPTION</a></p>
+        <p><a href="#C8">MULTITHREADED PROGRAMMING</a></p>
+        <p><a href="#C9">INTERRUPTING THREAD</a></p>
+        <p><a href="#C10">THREAD STATE</a></p>
+        <p><a href="#C11">THREAD PREORITY</a></p>
+        <p><a href="#C12">THREAD SYNCRONIZATION</a></p>
+        <p><a href="#C13">INTERTHREAD COMMUNICATION</a></p>
+        <br>
+        <p><a href="index.html"><b>HOME</b></a></p>
+      </div>
+</div>
+<div class="main">
+<footer>
+
+<h2 id="C1">EXCEPTION HANDILING:</h2>
+</footer>   
+<ul>
+ <p>   An exception handling is an unwanted or unexpected event ( problem )that arises during the execution of a program .The process will follow to handle that exception is called <b>EXCEPTION HANDILING</b>. <p>
+
+<img src="ex.PNG">
+
+
+
+
+   <p><b>NULL POINTER EXCEPTION:</b>
+  <P><b> NullPointerException </b> is a RuntimeException. In Java, a special null value can be assigned to an object reference. NullPointerException is thrown when program attempts to use an object reference that has the null value.</P>
+  <p><Strong> class EX<br>
+   {<br>
+    public static void main(String [] ar)<br>
+   {<br>
+     try                                  // try:It is a keyword used to specify a block.<br>
+                                                 Where we should place exception code. <br>
+                                                 The try block must be followed by either catch or finally.<br>
+         {<br>
+           String s=null;<br>
+           System.out.println(s.length());<br>
+         }<br>
+     catch(NullPointerException x)           // Catch: Catch block is used to handle the exception<br>
+                                                  It must processed by try block.<br>
+                                                  Which means we can't use catch block alone.<br>
+  
+      {<br>
+        System.out.println(x);<br>
+      }<br>
+      System.out.println("CSE");<br>
+   }<br>
+ }<br></Strong></p><P>
+
+
+
+
+
+<p><b>ARITHMETIC EXCEPTION:</b>
+<P><b> ARITHMETIC EXCEPTION </b>It is thrown when an exceptional condition has occurred in an <b>ARITHMETIC OPERATION</b>.</P>
+<p><Strong>class EX<br>
+ {<br>
+   public static void main(String [] a)<br>
+    {<br>
+      try                                //try:It is a keyword used to specify a block.<br>
+                                               Where we should place exception code. <br>
+                                               The try block must be followed by either catch or finally.<br>
+         {<br>
+            int a=10,b=0;<br>
+            System.out.println(a/b);<br>
+         }<br>
+     catch(ArethmeticException X)             //Catch: Catch block is used to handle the exception<br>
+                                                  It must processed by try block.<br>
+                                                  Which means we can't use catch block alone.<br>
+       {<br>
+          System.out.println(X);<br>
+       }<br>
+        System.out.println("vicky");<br>
+    }<br>
+ }<br></Strong></p>
+
+
+
+
+<p><h3>INDEX OUT OF BOUND EXCEPTION:</h3></P>
+<p><b>     Index Out of Bound</b>Exception are the Unchecked Exception that occurs at run-time errors. This arises because of invalid parameter passed to a method in a code.</p>
+
+
+<p><b> Types</b></p>
+    <ul>
+       <li>Array index out of bound</li>
+       <li>String index out of bound</li>  
+    </ul>
+
+<p><b>ARRAY INDEX OUT OF BOUND:</b></p>
+<p>These are the exception arises when a programmer tries to access an element beyond the capacity of index of the array. <br>
+This exception are seen at run-time rather than the compile time. This causes the program to crash at run-time.</p><br>
+
+<P><b>    Array Index Out Of Bound</b> is thrown to indicate that an array has been accessed with an illegal index.<br>
+ The Index is either negative or greater than or equal to the size of the array.</P>
+<p><Strong>class Ex<br>
+ {<br>
+  Public static void main(String [] a)<br>
+   {<br>
+     int a[]=new int [3];//syntax: array<br>
+     a[0]=1;<br>
+     a[1]=2;<br>
+     a[2]=3;<br>
+    a[3]=4;<br>
+    System.out.println(a[3]);<br>
+   }<br>
+}<br></Strong></p>
+
+
+
+
+<p><b>STRING INDEX OUT OF BOUND EXCEPTION: </b></p>
+<p>This exception is thrown by the methods of the String class, in order to indicate that an index is either negative, or greater than the size of the string itself.<br>
+ Moreover, some methods of the String class thrown this exception, when the specified index is equal to the size of the string. The java. lang.</p><r>
+<br>
+<p><b>     String Index Out Of Bound </b> is thrown by String class methods to indicate that an index is either negative than the size of the string.</p>
+<p><Strong> class A<br>
+ {<br>
+   Public static void main(String [] a)<br>
+    {<br>
+      try<br>
+       {<br>
+         String y="CSE";<br>
+         System.out.println(y.CharAt(6));<br>
+       }<br>
+     ctach (StringIndexOutOfBound Exception x)<br>
+       {<br>
+         System.out.println(x);<br>
+       }<br>
+      System.out.println("Vicky");<br>
+   }<br>
+ }<br></Strong>
+
+<footer>
+<h2 id="C2">EXCEPTION HIERARCHY:</h2>
+</footer>
+<p><b>    Exception Hierarchy</b>  All exception and errors types are sub classes of class Throwable, which is base class of <b>Hierarchy</b>.</p>
+<p>All exception and errors types are sub classes of class Throwable, which is base class of hierarchy.One branch is headed by Exception. <br>
+This class is used for exceptional conditions that user programs should catch. NullPointerException is an example of such an exception.<br>
+Another branch,Error are used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment itself(JRE).<br>
+ StackOverflowError is an example of such an error.</p>
+
+
+<p> </p>
+
+
+<footer>
+<h3 id="C3">THROWS:</h3>
+</footer>
+<p> In Java throw keyword is used to explicitly throw an exception.We can throw either checked or uncheked exception in java by throw keyword. <br>
+    The throw keyword is mainly used to throw custom exception.</P>
+
+<p>The Java throws keyword is used to declare an exception. It gives an information to the programmer that there may occur an exception so <br>
+it is better for the programmer to provide the exception handling code so that normal flow can be maintained.<br>
+ Exception Handling is mainly used to handle the checked exceptions.</p>
+<p><b>Syntax:</b> throw new Exception Name("Message");<br>
+<p><b> Example Program :</b></p>
+<p> <Strong>class A<br>
+ {<br>
+   void validate (int x)<br>
+    {<br>
+     if(x<18)<br>
+      {<br>
+        throw new ArithmeticException("Not To Vote");<br>
+      }<br>
+      else<br>
+       {<br>
+         System.out.println("Vote"):<br>
+       }<br>
+     }<br>
+   public static void main(String [] a)<br>
+    {<br>
+      try<br>
+       {<br>
+          A obj =new A ()<br>
+          obj.Validate(5);<br>
+       }<br>
+      catch( ArithmeticException x)<br>
+      {<br>
+        System.out.println(x);<br>
+      }<br>
+    }<br>
+ }<br></Strong></p>  
+
+
+
+<footer>
+<h4 id="C4">FINALLY</h4>
+</footer>
+<p>  In the Java programming language, the final keyword is used in several contexts to define an entity that can only be assigned once.<br>
+ Once a final variable has been assigned, it always contains the same value.<br>
+The <b>Finally</b> block is used to execute the important code of the program.It is executed weather an exception is handled <b>or</b> not.</p></b>
+ 
+<p><b> Example Program :</b></p>
+<p> <Strong>class A<br>
+   {<br>
+     void validate (int x)<br>
+     {<br>
+      if(x<18)<br>
+       {<br>
+         throw new ArithmeticException("Not To Vote");<br>
+       }<br>
+       else<br>
+        {<br>
+          System.out.println("Vote"):<br>
+        }<br>
+      }<br>
+   public static void main(String [] a)<br>
+   {<br>
+     try<br>
+       {<br>
+        A obj =new A ()<br>
+        obj.Validate(5);<br>
+       }<br>
+    catch( ArithmeticException x)<br>
+     {<br>
+       System.out.println(x);<br>
+     }<br>
+    finally
+     {<br>
+      System.out.println("CSE");<br>
+     }<br>
+    }<br>
+  }<br></Strong></p>  
+
+
+
+<footer>
+
+<h4 id="C5">BUILT IN EXCEPTION</h4>
+</footer>
+<p><b>     Built in exception</b> are the exceptions which are available in Java libraries. These exceptions are suitable to explain certain error situations. </p>
+<p><b> Example Program :</b></p>
+
+<p><Strong>class A<br>
+  {<br> 
+  public static void main(String args[])<br> 
+    {<br> 
+        try<br>
+         {<br> 
+            int a = 30, b = 0;<br> 
+            int c = a / b;<br> 
+            System.out.println(c);<br> 
+        }<br> 
+        catch (ArithmeticException e) <br>
+         {<br> 
+            System.out.println("Can't divide a number by 0"); <br>
+        }<br>
+    } <br>
+   } <br></Strong></p> 
+
+
+<footer>
+<h4 id="C6">USER DEFINED EXCEPTION</h4>
+</footer>
+<p>
+ User Defined Exception or custom exception is creating your own exception class and throws that exception using 'throw' keyword. This can be done by extending the class Exception.<br>
+ The keyword “throw” is used to create a new Exception and throw it to the catch block.</p>
+
+<br>
+<p><b>        User defined exception</b>If you are creating your own Exception that is known as custom exception or user-defined exception.<br>
+                    Java custom exceptions are used to customize the exception according to user need.<br>
+<p><b> Example Program :</b></p>
+<p><Strong>class VickyExtends Exception<br>
+  {<br>
+    Vicky(String a)<br>
+     {<br>
+      Super(a);      //Super :    It is used to call the base class constructor.<br>
+                                  It should be specified inside the constructor.<br>
+                                  It should be a first line in your constructor.<br> 
+     }<br>
+  }<br>
+class A  
+   {<br>
+     static void validate (int x) throws VickyException
+       {<br>
+         if(x<18)
+           {<br>
+            throw new VickyException("Not to vote");<br>
+           }<br>
+       }<br>
+     
+public static void main (String [] a)<br>
+    {<br>
+        try<br>
+           {<br>
+            validate (14);<br>
+           }<br>
+        catch (VickyException x)<br>
+          {<br>
+             System.out.println(x);<br>
+          }<br>
+     }<br>
+  }<br></Strong></p>
+
+
+
+
+<footer>
+<h4 id="C7">CHAINED EXCEPTION</h4>
+</footer>
+<p> <b>Chained Exception</b> allows to relate one exception with another exception, i.e one exception describes cause of another exception.</p> 
+<p>Chained Exception helps to identify a situation in which one exception causes another Exception in an application.</p>
+
+
+<p><b> Example Program :</b></p>
+<strong>
+<p> import java.io.IOException;<br>
+public class ChainedException<br>
+ {<br>
+   static void m1()throws Throwable<br>
+    {<br>
+      try<br>
+       {<br>
+         int a=10/0;
+       }<br>
+     catch(Exception e)<br>
+      {<br>
+        throw e.initcause(new IoException("Unable to read and write)<br>
+      }<br>
+    }<br>
+public static void main(String [] a)<br>
+    {<br>
+     try<br>
+      {<br>
+       m1();<br>
+      }<br>
+      catch (Throwable t)<br>
+       {<br>
+           System.out.println(t.getcause());<br>
+           System.out.println(t);<br>  
+       }<bfr>
+     }<br>
+  }<br>
+</p>
+</strong>
+<footer>
+<h4 id="C8">MULTITHREAD PROGRAMMING</h4>
+</footer>
+<P>     Multithread programming</b> is a process of executing multiple theads at parallely. Thread is a light weight process . It is a small unit of process. <br>
+
+
+<p><Strong> class A extendes Thread<br>
+  {<br>
+     public void run()<br>
+       {<br>
+        for (int i=1;i<=5;i++)<br>
+          {<br>
+            System.out.println(i);
+              try<br>
+               {<br>
+                 sleep(1000);<br>
+               }<br>
+              catch (InterruptedException e)<br>
+               {<br>
+                 System.out.println("CSE")<br>
+               }<br>
+           }<br>   
+       }<br>
+   }<br>
+class B extends Thread<br>
+ {<br>
+   public void run()<br>
+    {<br>
+        for (int j=1;j<=15;ji++)<br>
+          {<br>
+            System.out.println(j);
+              try<br>
+               {<br>
+                 sleep(1000);<br>
+               }<br>
+              catch (InterruptedException e)<br>
+               {<br>
+                 System.out.println("CSE")<br>
+               }<br>
+           }<br>   
+       }<br>
+   }<br>
+class c<br>
+ {<br>
+   public static void main(String [] a)<br>
+    {<br>
+      A obj=new A();<br>
+      B obj1=new B();<br>
+      obj.start();
+      obj1.start();
+    }<br>
+ }<br></Strong>
+
+
+<h9 id="C9"><b>Creating Thread Using Runnable Interface:</b></h9>
+<p><Strong> class A implements runnable<br>
+ {<br>
+  public void run()<br>
+   {<br>
+    for( int i=0;i<5;i++)<br>
+     {<br>
+       System.out.println(i);<br>
+        try<br>
+         {<br>
+          Thread.sleep(1000);<br>
+         }<br>
+        catch (InterruptedException e)<br>
+         {<br>
+           System.out.println("CSE");<br>
+         }<br>
+      }<br>
+    }<br>
+ }<br>
+class B<br>
+ {<br>
+   public static void main(String [] a)<br>
+    {<br>
+      A obj=new A();<br>
+      Thread obj1=new Thread(obj);<br>
+      Thread obj2=new Thread(obj);<br> 
+      obj1.start();<br>
+      obj2.start();<br>
+     }<br>
+  }<br></Strong> 
+
+
+
+<h10 id="C10"><b>Lifecycle and States of a Thread in Java</b></h10>
+<p>     A thread in Java at any point of time exists in any one of the following states. A thread lies only in one of the shown states at any instant.</p>
+   <ul>
+      <li>New</li>
+      <li>Runnable</li>
+      <li>Blocked</li>
+      <li>Waiting</li>
+      <li>Timed Waiting</li>
+      <li>Terminated</li>
+   </ul>
+<p>  The diagram shown below represent various states of a thread at any instant of time.</p>
+
+
+<img src="th.JPG">
+
+
+<p><b>New Thread :</b> When a new thread is created, it is in the new state. The thread has not yet started to run when thread is in this state. 
+                       When a thread lies in the new state, it’s code is yet to be run and hasn’t started to execute.</p>
+<p><b>Runnable State :</b>A thread that is ready to run is moved to runnable state. In this state, a thread might actually be running or it might be ready run at any instant of time. 
+                         It is the responsibility of the thread scheduler to give the thread, time to run.</p>
+<p><b>Blocked/Waiting :</b>When a thread is temporarily inactive, when a thread is waiting for I/O to complete, it lies in the blocked state.  
+                           It's the responsibility of the thread scheduler to reactivate and schedule a blocked/waiting thread. A thread in this state cannot continue its execution any further until it is moved to runnable state. 
+                           Any thread in these states does not consume any CPU cycle.</p>
+<p><b>Timed Waiting :</b>A thread lies in timed waiting state when it calls a method with a time out parameter. A thread lies in this state until the timeout is completed or until a notification is received. 
+                   For example, when a thread calls sleep or a conditional wait, it is moved to a timed waiting state.</p>
+<p><b>Terminated:</b>A thread terminates because of either of the following reasons:
+                 <ul>  
+                    <li>  Because it exists normally. This happens when the code of thread has entirely executed by the program.</li>
+                    <li>  Because there occurred some unusual erroneous event, like segmentation fault or an unhandled exception.</li>
+                 </ul>
+
+
+<h11 id="C11"><b>Thread Priority </b></h11>
+<p>      Each thread have a priority. Priorities are represented by a number between 1 and 10. In most cases, thread schedular schedules the threads according to their priority (known as preemptive scheduling). 
+         But it is not guaranteed because it depends on JVM specification that which scheduling it chooses.</p>
+<p>Three constants defined in Thread class:</p>
+<ul> <li>public static int MIN_PRIORITY</li>  
+     <li>public static int NORM_PRIORITY</li>
+     <li>public static int MAX_PRIORITY</li>
+</ul>
+<p><Strong>class TestMultiPriority1 extends Thread<br>
+  {<br>  
+    public void run()<br>
+     {<br>  
+       System.out.println("running thread name is:"+Thread.currentThread().getName());<br>  
+       System.out.println("running thread priority is:"+Thread.currentThread().getPriority());  <br>
+  
+     }<br>  
+ public static void main(String args[])<br>
+   {<bR>  
+     TestMultiPriority1 m1=new TestMultiPriority1(); <br>
+     TestMultiPriority1 m2=new TestMultiPriority1(); <br>  
+     m1.setPriority(Thread.MIN_PRIORITY); <br>  
+     m2.setPriority(Thread.MAX_PRIORITY);<br>    
+     m1.start();  <br>  
+     m2.start();  <br>  
+   
+  } <br>  
+}  <br> </Strong></p>   
+
+
+
+
+<h12 id="C12"><b>Synchronization</b></h12>
+<p>Synchronization in java is the capability to control the access of multiple threads to any shared resource.Java Synchronization is better option where we want to allow only one thread to access the shared resource.</p>
+<p>The synchronization is mainly used to</p>
+<ul>
+   <li>To prevent thread interference </li>
+   <li>To prevent consistency problem</li>
+</ul>
+<p> To overcome this problem moving on to <b>Thread Synchronization</b></p>
+<p><Strong>class A implements Runnable<br>
+ {<br>
+  int count;<br>
+   public synchronized void incre()<br>
+    {<br>
+     count++;<br>
+    }<br>
+   public void run()<br>
+    {<br>
+     for (int i=0;i<1000;i++)<br>
+      {<br>
+       incre();<br>
+       }<br>
+     }<br>
+   }<br>
+class B<br>
+   {<br>
+     public static void mainIString [] a)<br>
+      {<br>
+        A obj =new A();<br>
+       Thread obj1= new Thread (obj);<br>
+       Thread obj2= new Thread (obj);<br>
+       Thread obj3= new Thread (obj);<br>
+       obj1.start();<br>
+       obj2.start();<br>
+       obj3.start();<br>
+       obj1.join()<br>
+       obj1.join()<br>
+       obj1.join()<br>
+   System.out.println(obj.count);
+  }<br>
+ }<br></Strong></p>
+
+
+
+
+<h13 id="C13"><b>INTER THREAD COMMUNICATION</b></h13>
+<p><b>Inter-thread communication</b> or Co-operation is all about allowing synchronized threads to communicate with each other.
+   Cooperation (Inter-thread communication) is a mechanism in which a thread is paused running in its critical section and another thread is allowed to enter (or lock) in the same critical section to be executed.
+   it is implemented by following methods of Object class</p>
+ <ul>
+    <li>wait()</li>
+    <li>notify()</li>
+    <li>notifyAll()</li>
+ </ul>
+<p><b>wait() method</b></p>
+ <p>Causes current thread to release the lock and wait until either another thread invokes the notify() method or the notifyAll() method for this object, or a specified amount of time has elapsed.</p>
+  
+<p><b>notify() method</b></p>
+<p>Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this object, one of them is chosen to be awakened. The choice is arbitrary and occurs at the discretion of the implementation.</p>
+
+<p><b>notifyAll() method</b></p>
+<p>Wakes up all threads that are waiting on this object's monitor.</p>
+
+<p><b>Understanding the process of inter-thread communication</b></p>
+
+<img src="t1.GIF">
+
+
+<p><b>Example Program:</b></p>
+<p><Strong>class Customer<br>
+ {<br>  
+    int amount=10000;  <br>  
+  
+    synchronized void withdraw(int amount)<br>  
+     {  <br>  
+       System.out.println("going to withdraw..."); <br>   
+  
+       if(this.amount < amount)<br>  
+        {  <br>  
+          System.out.println("Less balance; waiting for deposit..."); <br>  
+           try<br>  
+            {<br>  
+             wait();<br>  
+            }<br>  
+         catch(Exception e)<br>  
+            {<br>  
+            } <br>   
+        }<br>    
+        this.amount-=amount; <br>   
+        System.out.println("withdraw completed..."); <br>   
+     }  <br>  
+  
+     synchronized void deposit(int amount)<br>  
+       {<br>    
+         System.out.println("going to deposit...");  <br>  
+         this.amount+=amount;  <br>  
+         System.out.println("deposit completed... "); <br>   
+         notify();  <br>  
+       }  <br>  
+     }  <br>  
+class Test<br>  
+    {<br>    
+     public static void main(String args[])<br>  
+       {<br>    
+         final Customer c=new Customer(); <br>   
+         new Thread()<br>  
+          {<br>    
+            public void run(){c.withdraw(15000);<br>  
+          }<br>    
+       }<br>  
+       .start(); <br>   
+        new Thread()<br>  
+      {<br>    
+        public void run()<br>  
+         {<br>  
+           c.deposit(10000);<br>  
+         }<br>    
+      }<br>  
+    .start();  <br>  
+  
+   }<br>  
+ }<br>   </Strong><p/> 
+
+</div>
+
+</body>
+</html>
+

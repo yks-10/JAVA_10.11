@@ -1,0 +1,518 @@
+
+<html>
+<tittle>RECORD<tittle>
+<body>
+<p align="center"</p>
+<div class="b">
+   <div class="myBox">
+<p><a href ="#C1">CLASS AND INSTANCES</a></p>
+<p><a href ="#C2">MULTILeVEL INHERITANCE</a></p>
+<p><a href ="#C3">HEIRARICAL INHERITANCE</a></p>
+<p><a href ="#C4">DYNAMIC POLYMORPHISH</a></p>
+<p><a href ="#C5">MULTIPLE INHERITANCE USING INTERFACE</a></p>
+<p><a href ="#C6">OVERIDING USING INTERFACE</a></p>
+<p><a href ="#C7">IMPLEMENTATION OF STRING</a></p>
+<p><a href ="#C8">WRAPPER CLASS</a></P>
+<p><a href ="#C9">IMPLEMETATION OF GENERIC METHOD</a></p>
+<p><a href ="#C10">EXCEPTION HANDLING</a></p>
+<p><a href ="#C11">USER DEFINED EXCEPTION </a></p>
+<p><a href ="#C12">IMPLEMENTATION OF MULTITHREAD</a></p>
+<p><a href ="#C13">INTERTHREAD COMMUNCATION</a></P>
+<p><a href ="#C14">IMPLEMENTATION OF ARRAY LIST</a></p>
+<p><a href ="#C15">TREE SET</a></p>
+<p><a href ="#C16">APPLET</a></p>
+<p><a href ="#C17">EVENT HANDLING</a></p>
+<p><a href ="#C18">CALCULATOR USING AWT</a></p>
+</div>
+
+
+
+
+
+
+
+<h2 id="C1">CLASS AND INSTANCE</h2>
+
+    <strong>
+    Class Operation<br>
+
+   {<br>
+      int add(int a,int b,float c)<br>
+         {<br>
+             return(int)(a+b+c);<br>
+          }<br>
+       int sub(float a,float b);<br>
+        {<br>
+            return(int)(a-b);<br>
+         }<br>
+      void sqr(int a)<br>
+          {<br>
+              System.out.println(a*a);<br>
+           }<br>
+      int fact(int a)<br>
+        {<br>
+           int temp=1;<br>
+           int i;<br>
+              for(i=1;i<1;i++)<br>
+                 temp=temp*i;<br>
+                 return(temp);<br>
+          }<br>
+    String eodd(int a)<br>
+       {<br>
+          if(a%2==0)<br>
+          {<br>
+             return("EVEN");<br>
+             }<br>
+         else<br>
+          {<br>
+            return("ODD");<br>
+           }<br>
+        }<br>
+   int sod(int n)<br>
+        {<br>
+            int rem,sum=0;<br>
+          while(n!=0)<br>
+           {<br>
+              rem=n%10;<br>
+              sum=sum+rem;<br>
+              n=n/10;<br>
+             }<br>
+      return(sum);<br>
+       }<br>
+  Public Static void main(String ar[])<br>
+      {<br>
+        operation obj=new operation();<br>
+        System.out.println(obj.add(2,5,5.8f));<br>
+        System.out.println(obj.sub(6,3));<br>
+        System.out.println(obj.sqr(3));<br>
+        System.out.println(obj.fact(2));<br>
+        System.out.println(obj.eodd(6));<br>
+        System.out.println(obj.sod(35));<br>
+       }<br>
+   }<br>
+</strong>
+
+
+
+<h2 id="C2">MULTILEVEL INHERITANCE</h2>
+
+<strong>
+        Class A <br>
+  {<br>
+            int a;<br>
+            int b;<br>
+            int add()<br>
+              {<br>
+                    return(a+b);<br>
+                 }<br>
+               }<br>
+        Class B extends A<br>
+           {<br>
+              String result(int x)<br>
+               {<br>
+                 if(x>=50)<br>
+                   {<br>
+                         System.out.println("Pass"+" "+(x));<br>
+                      }<br>
+            else<br>
+             {<br>
+               system.out.println("Fail");<br>
+              }<br>
+           }<br>
+        Class C extends B<br>
+           
+              void print()<br>
+                {<br>
+                   System.out.println("WELCOME TO INHERITANCE");<br>
+                } <br>
+         Public Static void main(String ar[])<br>
+           {<br>
+                 obj.c=new c();<br>
+                 System.out.println(obj.add(20,50));<br>
+                 System.out.println(obj.result(66));<br>
+                 obj.print();<br>
+                 }<br>
+    }<br>
+  </strong>
+
+
+
+
+<h3 id="C3">HEIRARICAL INHERITANCE</h3>
+
+
+
+
+<strong>
+     Class A<br>
+        {<br>
+           void sub(int a,int b)<br>
+             {<br>
+               System.out.println(a-b);<br>
+                }<br>
+              }<br>
+     Class B extends A<br>
+        {<br>
+           String result(int x)<br>
+              if(x>=50)<br>
+                  return("PASS");<br>
+                  else<br>
+                  return("FAIL");<br>
+          }<br>
+     Class  C extends A<br>
+       {<br>
+         void print()<br>
+           {<br>
+             System.out.println("WELCOME TO HEIRARICAL INHERITANCE");<br>
+            }<br>
+    Public Static void main(String ar[])<br>
+        {<br>
+           B obj =new B();<br>
+           obj.sub(20,10);<br>
+           System.out.println(obj.result(70));<br>
+           C obj1=new c();<br>
+           obj1.print();<br>
+         }<br>
+      }<br>
+</strong>
+
+
+
+
+
+
+
+<h4 id="C4">DYNAMIC POLYMORPHISH</h4>
+
+
+<strong>
+<p>   Class Fruit</p>
+      {<br>
+        String name;<br>
+        String taste;<br>
+        String size;<br>
+        void eat(String name,String taste)<br>
+          {<br>
+        	System.out.println("Name of the fruit"+" "+name);<br>
+        	System.out.println("Taste of the fruit"+" "+tase);<br>
+       		}<br>
+          }<br>
+      Class Apple extends Fruits<br>
+      {<br>
+        void eat(String name,String tase)<br>
+          {<br>
+               System.out.println("Name the fruit"+"  "+name);<br>
+               System.out.println("Tase of the fruit "+" "+tase);<br>
+              }<br>
+	 }<br>
+     Class Orange extends Fruit<br>
+      {<br>
+	void eat(string name,String taste)<br>
+	{<br>
+		System.out.println("name of the fruit"+" "+name);<br>
+		System.out.println("Tase of the fruit"+" "+tase);<br>
+          }<br>
+       Public Static void main(String arr[])<br>
+        {<br>
+ 		Apple obj=new Apple();<br>
+		Orange obj1=new Orange();<br>
+		obj.eat("Orange","Sour");<br>
+		obj1("Apple",Sweet");<br>
+	}<br>
+    }      <br>
+</strong>
+
+
+
+
+
+<h4 id="C5">MULTIPLE INHERITANCE USING INTERFACE</h4>
+<strong>
+  Interface C1<br>
+	{<br>
+		Public Static final int m=10;<br>
+		Public static final int n=10;<br>
+                Public abstract void adder(int x);<br>
+           }<br>
+  Interface C2<br>
+         {<b>
+		Public Static final int a=100;<br>
+		Public Static final int b=20;<br>
+		Public Static void div();<br>
+	  }<br>
+    Class Calculation Implements C1,C2<br>
+	{<br>
+		Public void oddeven(int y)<br>
+	     {if(y%z==0)<br>
+		{<br>
+		  System.out.println("The number"+y+"is even);<br>
+		}<br>
+	      else<br>
+		{<br>
+		 System.out.println("The number is"+y+"is odd);<br>
+		}<br>
+	}<br>
+Public void div()<br>
+	{<br>
+		System.out.println("Division of a and b :"+(a/b));<br>
+		}<br>
+	public Static void main(String ar[])<br>
+          {<br>
+               Calculation obj=new Calculation()<br>
+		obj.Oddeven(40)<br>
+		obj.div();<br>
+         }<br>
+	}<br>
+ </strong>
+
+
+
+
+
+
+
+<h5  id="C6">OVERIDING USING INTERFACE</h5>
+
+
+
+<strong>
+  <p>
+   Interface bank<br>
+	{<br>
+	    Public abstract int ir()<br>
+	}<br>
+ Class SBI implement bank<br>
+  {<br>
+	Public int ir()<br>
+ 	{<br>
+ 	   return(6);<br>
+ 	 }<br>
+  }<br>
+ Class IOB implements bank<br>
+ {<br>
+	Public int ir()<br>
+	  {<br>
+	    return(7);<br>
+	  }<br>
+  }<br>
+  Class KVB implements bank<br>
+ {<br>
+	Public int ir()<br>
+	  {<br>
+	    return(8);<br>
+	  }<br>
+  }<br>
+   Public Static void main(String ar[])<br>
+  {<br>
+	SBI obj=new obj();<br>
+	System.out.println("SBI Interest is"+(obj.());<br>
+	IOB obj1=new IOB();<br>
+	System.out.println("IOB Interest is"+(obj1.());<br>
+        KVB obj2=new KVB();
+	System.out.println("KVB Interest is"+(obj2.());<br>
+    }<br>
+}<br>
+</strong>
+</p>
+
+
+
+
+
+<h7 id="C7">IMPLEMENTATION OF STRING</h7>
+
+
+
+<strong>
+<p>
+   Public class starr<br>
+	{<br>
+	  String reverse(String S)<br>
+	{<br>
+	    String out=" ";<br>
+	    String result="  ";<br>
+	   String starr[]=S.Split("  ");<br>
+	for(int i=0;i<=starr.length()-1;i++)<br>
+	   {<br>
+	     out=" ";<br>
+	     for(int j=starr[i].length()-1;j>=0;j--)<br>
+		{<br>
+		  if(Character.isUpperCase(starr[i].charAt(j))<br>
+			  out=out+Character.toLowerCase(starr[i].charAt(j));<br>
+		   else<br>
+			out=out+character.toLowerCase(starr[i].charat(j));<br>
+		}<br>
+	result=result+out+" ";<br>
+       }<br>
+     return result;<br>
+    }<br>
+ Public Static void main(String arr[])<br>
+	{<br>
+		starr object =new starr();<br>
+		System.out.println(object.reverse("WiPro TecHnoLoGY");<br>
+	   }<br>
+    }<br>
+   </strong>
+</p>
+
+
+
+
+
+<h8 id="C8">WRAPPER CLASS</h8>
+<strong>
+
+<p>
+   Public Class Wrapper<br>
+  {<br>
+     Public Static void main(String arr[])<br>
+	{<br>
+	   byte b=10;<br>
+          <p>//AUTO BOXING</p>
+	   Byte b1=b;<br>
+         System.out.println("BYTE OBJECT:"+b1);<br>
+           <p>//UN BOXING</p>
+	  byte b4=b1;<br>
+	 System.out.println("byte value is:"+b4);<br>
+        }<br>
+  }<br>
+        
+</p>
+</strong>
+
+
+
+
+
+
+
+
+<h9 id="C9">IMPLEMETATION OF GENERIC METHOD</h9>   
+<p> there are two types in generic</p>
+       <ul>GENERIC CLASS</ul>
+	<ul>GENERIC METHOD</ul>
+
+
+<p><b>GENERIC CLASS</b></p>
+   
+  <p>
+   <strong>
+     Class A<T1,T2><br>
+    {<br>
+	T1 a;<br>
+	T2 b;<br>
+	Public void set(T1 x,T2 y)<br>
+ 	 {<br>
+		a=x;<br>
+		b=y:<br>
+	   }<br>
+       Public T1 send a();<br>
+	{<br>
+		return(a);<br>
+	  }<br>
+  Public Void print()<br>
+	{<br>
+		System.out.println("a value is :"+a);<br>
+		Syatem.out.println("B value is :"+b);<br>
+	  }<br>
+  Public Static void main(String arr[])<br>
+    {<br>
+	A<Integer,String> obj=new A<Integer,String>();<br>
+	obj.set(12,"App");<br>
+	System.out.println(obj.send a());<br>
+         obj.print();<br>
+	}<br>
+   }<br>
+ </strong>
+</p>
+
+<p><b>GENERIC METHOD</b></p>
+
+<p>
+  <strong>
+     Class A<br>
+	{<br>
+	   <E> Void print(E a)<br>
+	   {<br>
+	   	System.outprintln("a value is :"+a);<br>
+	    }<br>
+ 	Public Static void main(String arr[])<br>
+	{<br>
+	 Main obj=new Main();<br>
+	 Main obj1=new Main();<br>
+	 obj.print(12);<br>
+	 obj1.print("VIGNESH");<br>
+        }<br>
+      }<br>
+     </strong>
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+<strong>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

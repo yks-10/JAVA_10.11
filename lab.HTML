@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RECORD</title>
+
+<!-- CSS -->
+<style>
+
+
+ nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:17px;
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 100px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 3px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+</style>
+</head>
+<header>
+ <p><h1><b>RECORD</b></h1></p>
+</header>
+<p>             </p>
+<body>
+
+<!-- HTML -->
+<div class="sidenav">
+  <div class="myBox">
+  <p><a href ="#C1">CLASS AND INSTANCES</a></p>
+  <p><a href ="#C2">MULTILeVEL INHERITANCE</a></p>
+  <p><a href ="#C3">HEIRARICAL INHERITANCE</a></p>
+  <p><a href ="#C4">DYNAMIC POLYMORPHISH</a></p>
+  <p><a href ="#C5">MULTIPLE INHERITANCE USING INTERFACE</a></p>
+  <p><a href ="#C6">OVERIDING USING INTERFACE</a></p>
+  <p><a href ="#C7">IMPLEMENTATION OF STRING</a></p>
+  <p><a href ="#C8">WRAPPER CLASS</a></P>
+  <p><a href ="#C9">IMPLEMETATION OF GENERIC METHOD</a></p>
+  <p><a href ="#C10">EXCEPTION HANDLING</a></p>
+  <p><a href ="#C11">USER DEFINED EXCEPTION </a></p>
+  <p><a href ="#C12">IMPLEMENTATION OF MULTITHREAD</a></p>
+  <p><a href ="#C13">INTERTHREAD COMMUNCATION</a></P>
+  <p><a href ="#C14">IMPLEMENTATION OF ARRAY LIST</a></p>
+  <p><a href ="#C15">TREE SET</a></p>
+  <p><a href ="#C16">APPLET</a></p>
+  <p><a href ="#C17">EVENT HANDLING</a></p>
+  <p><a href ="#C18">CALCULATOR USING AWT</a></p>
+  <br>
+  <p><a href="index.html"><b>HOME</b></a></p>
+  </div>
+
+</p>
+</p>
+</div>
+
+<div class="main">
+
+  <ul>
+      <ul>
+<footer>
+<h2 id="C1">CLASS AND INSTANCE</h2>
+</footer>
+
+<p>
+
+   </p>
+<p>
+    <strong>
+    public class Operation<br>
+
+   {<br>
+      int add(int a,int b,float c)<br>
+         {<br>
+             return(int)(a+b+c);<br>
+          }<br>
+       int sub(float a,float b)<br>
+        {<br>
+            return(int)(a-b);<br>
+         }<br>
+      void sqr(int a)<br>
+          {<br>
+              System.out.println(a*a);<br>
+           }<br>
+      int fact(int a)<br>
+        {<br>
+           int temp=1;<br>
+           int i;<br>
+              for(i=1;i<1;i++)<br>
+                 temp=temp*i;<br>
+                 return(temp);<br>
+          }<br>
+    String eodd(int a)<br>
+       {<br>
+          if(a%2==0)<br>
+          {<br>
+             return("EVEN");<br>
+             }<br>
+         else<br>
+          {<br>
+            return("ODD");<br>
+           }<br>
+        }<br>
+   int sod(int n)<br>
+        {<br>
+            int rem,sum=0;<br>
+          while(n!=0)<br>
+           {<br>
+              rem=n%10;<br>
+              sum=sum+rem;<br>
+              n=n/10;<br>
+             }<br>
+      return(sum);<br>
+       }<br>
+  public static void main(String ar[])<br>
+      {<br>
+        Operation obj=new Operation();<br>
+        System.out.println(obj.add(2,5,5.8f));<br>
+        System.out.println(obj.sub(6,3));<br>
+        obj.sqr(3);<br>
+        System.out.println(obj.fact(2));<br>
+        System.out.println(obj.eodd(6));<br>
+        System.out.println(obj.sod(35));<br>
+       }<br>
+   }<br>
+</strong>
+
+</p>
+
+
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+<footer>
+<h2 id="C2">MULTILEVEL INHERITANCE</h2>
+</footer>
+<p>When a class extends a class, which extends anther class then this is called multilevel inheritance.<br>
+ For example class C extends class B and class B extends class A then this type of inheritance is known as multilevel inheritance.</p>
+
+
+<img src="R1.PNG">
+<p>  
+
+</p>
+<p>
+<strong>
+    public class A <br>
+  {<br>
+            int a;<br>
+            int b;<br>
+            int add()<br>
+              {<br>
+                    return(a+b);<br>
+                 }<br>
+               }<br>
+        Class B extends A<br>
+           {<br>
+              String result(int x)<br>
+               {<br>
+                 if(x>=50)<br>
+                   {<br>
+                         System.out.println("Pass"+" "+(x));<br>
+                      }<br>
+            else<br>
+             {<br>
+               System.out.println("Fail");<br>
+              }<br>
+}<br>
+           }<br>
+        Class C extends B<br>
+           
+              void print()<br>
+                {<br>
+                   System.out.println("WELCOME TO INHERITANCE");<br>
+                } <br>
+         public static void main(String ar[])<br>
+           {<br>
+                 C obj=new C();<br>
+                 System.out.println(obj.add(20,50));<br>
+                 System.out.println(obj.result(66));<br>
+                 obj.print();<br>
+                 }<br>
+    }<br>
+  </strong>
+</p>
+
+
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+
+<br>
+
+<footer>
+<h3 id="C3">HEIRARICAL INHERITANCE</h3>
+</footer>
+<p>When more than one classes inherit a same class then this is called hierarchical inheritance.<br>
+
+In Hierarchical Inheritance, one class serves as a superclass (base class) for more than one sub class.<br>
+In below image, the class A serves as a base class for the derived class B,C and D.In java, we can achieve multiple inheritance only through Interfaces.</p>
+</p>
+<img src="R2.PNG">
+
+
+<p>
+<strong>
+      class A<br>
+        {<br>
+           void sub(int a,int b)<br>
+             {<br>
+               System.out.println(a-b);<br>
+                }<br>
+              }<br>
+     class B extends A<br>
+        {<br>
+           String result(int x)<br>
+{<br>
+              if(x>=50)<br>
+                  return("PASS");<br>
+                  else<br>
+                  return("FAIL");<br>
+          }<br>
+}<br>
+    public class  C extends A<br>
+       {<br>
+         void print()<br>
+           {<br>
+             System.out.println("WELCOME TO HEIRARICAL INHERITANCE");<br>
+            }<br>
+    public static void main(String ar[])<br>
+        {<br>
+           B obj =new B();<br>
+           obj.sub(20,10);<br>
+           System.out.println(obj.result(70));<br>
+           C obj1=new C();<br>
+           obj1.print();<br>
+         }<br>
+      }<br>
+</strong>
+
+
+
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+
+<br>
+
+
+
+<footer>
+<h4 id="C4">DYNAMIC POLYMORPHISH</h4>
+</footer>
+
+<strong>
+<p>   class Fruit<br>
+
+{<br>
+String name;<br>
+String taste;<br>
+String size;<br>
+void eat(String name,String taste)<br>
+{<br>
+System.out.println("Name of the fruit"+" "+name);<br>
+System.out.println("Taste of the fruit"+" "+taste);<br>
+}<br>
+}<br>
+class Apple extends Fruit<br>
+{<br>
+void eat(String name,String tase)<br>
+{<br>
+System.out.println("Name the fruit"+" "+name);<br>
+System.out.println("Taste of the fruit "+" "+tase);<br>
+}<br>
+}<br>
+public class Orange extends Fruit<br>
+{<br>
+void eat(String name,String taste)<br>
+{<br>
+System.out.println("name of the fruit"+" "+name);<br>
+System.out.println("Taste of the fruit"+" "+taste);<br>
+}<br>
+public static void main(String arr[])<br>
+{<br>
+Apple obj=new Apple();<br>
+Orange obj1=new Orange();<br>
+obj.eat("Orange","Sour");<br>
+obj1.eat("Apple","Sweet");<br>
+}<br>
+}<br>
+</strong>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+<br>
+<br>
+<br>
+
+
+
+<footer>
+<h4 id="C5">MULTIPLE INHERITANCE USING INTERFACE</h4>
+</footer>
+<p>  </p>
+<p><strong>
+  interface C1<br>
+{<br>
+public static final int m=10;<br>
+public static final int n=10;<br>
+public abstract void adder(int x);<br>
+}<br>
+interface C2<br>
+{ public static final int a=100;<br>
+public static final int b=20;<br>
+public static void div();<br>
+}<br>
+public class Calculation implements C1,C2<br>
+{<br>
+public static void oddeven(int y)<br>
+{<br>
+    if(y%z==0)<br>
+{
+System.out.println("The number" +y+"is even");<br>
+}<br>
+else<br>
+{<br>
+System.out.println("The number is"+y+"is odd");<br>
+}<br>
+}<br>
+public  static void div()<br>
+{<br>
+System.out.println("Division of a and b :"+(a/b));<br>
+}<br>
+public static void main(String ar[])<br>
+{<br>
+Calculation obj=new Calculation();<br>
+obj.oddeven(40);<br>
+obj.div();<br>
+}<br>
+}<br>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+
+<footer>
+<h5  id="C6">OVERIDING USING INTERFACE</h5>
+</footer>
+
+
+<strong>
+  <p>
+   interface bank<br>
+	{<br>
+	    Public abstract int ir()<br>
+	}<br>
+ class SBI implements bank<br>
+  {<br>
+	Public int ir()<br>
+ 	{<br>
+ 	   return(6);<br>
+ 	 }<br>
+  }<br>
+ class IOB implements bank<br>
+ {<br>
+	Public int ir()<br>
+	  {<br>
+	    return(7);<br>
+	  }<br>
+  }<br>
+ public class KVB implements bank<br>
+ {<br>
+	Public int ir()<br>
+	  {<br>
+	    return(8);<br>
+	  }<br>
+  }<br>
+   public static void main(String ar[])<br>
+  {<br>
+	SBI obj=new obj();<br>
+	System.out.println("SBI Interest is"+(obj.());<br>
+	IOB obj1=new IOB();<br>
+	System.out.println("IOB Interest is"+(obj1.());<br>
+        KVB obj2=new KVB();
+	System.out.println("KVB Interest is"+(obj2.());<br>
+    }<br>
+}<br>
+</strong>
+</p>
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+
+
+
+
+<footer>
+<h7 id="C7">IMPLEMENTATION OF STRING</h7>
+</footer>
+
+
+<strong>
+<p>
+   public class starr<br>
+	{<br>
+	  String reverse(String S)<br>
+	{<br>
+	    String out=" ";<br>
+	    String result="  ";<br>
+	   String starr[]=S.Split("  ");<br>
+	for(int i=0;i<=starr.length()-1;i++)<br>
+	   {<br>
+	     out=" ";<br>
+	     for(int j=starr[i].length()-1;j>=0;j--)<br>
+		{<br>
+		  if(Character.isUpperCase(starr[i].charAt(j))<br>
+			  out=out+Character.toLowerCase(starr[i].charAt(j));<br>
+		   else<br>
+			out=out+character.toLowerCase(starr[i].charat(j));<br>
+		}<br>
+	result=result+out+" ";<br>
+       }<br>
+     return result;<br>
+    }<br>
+ public static void main(String arr[])<br>
+	{<br>
+		starr object =new starr();<br>
+		System.out.println(object.reverse("WiPro TecHnoLoGY");<br>
+	   }<br>
+    }<br>
+   </strong>
+</p>
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+<footer>
+<h8 id="C8">WRAPPER CLASS</h8>
+</footer>
+
+<p>A Wrapper class is a class whose object wraps or contains a primitive data types.<br>
+When we create an object to a wrapper class, it contains a field. in this field, we can store a primitive data types.</p>
+<table>
+  <tr>
+   <th>PRIMITIVE DATA TYPE</th>
+   <th>WRAPPER CLASS</th>
+  </tr>
+  <tr>
+   <th>char</th>
+   <th>Character</th>
+  </tr>
+  <tr>
+    <th>byte</th>
+    <th>Byte</th>
+   </tr>
+  <tr>
+    <th>short</th>
+    <th>Short</th>
+  </tr>
+  <tr>
+    <th>long</th>
+    <th>Long<th>
+   </tr>
+  <tr>
+    <th>float</th>
+    <th>Float</th>
+  </tr>
+  <tr>
+    <th>double</th>
+     <th>Double</th>
+  </tr>
+  <tr> 
+    <th>boolean</th>
+     <th>Boolean</th>
+  </tr>
+<table>
+<p>for more refer unit 2</p>
+
+<strong>
+
+<p>
+   public Class Wrapper<br>
+  {<br>
+     public static void main(String arr[])<br>
+	{<br>
+	   byte b=10;<br>
+          <p>//AUTO BOXING</p>
+	   Byte b1=b;<br>
+         System.out.println("BYTE OBJECT:"+b1);<br>
+           <p>//UN BOXING</p>
+	  byte b4=b1;<br>
+	 System.out.println("byte value is:"+b4);<br>
+        }<br>
+  }<br>
+        
+</p>
+</strong>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+
+<footer>
+<h9 id="C9">IMPLEMETATION OF GENERIC METHOD</h9>   
+</footer>
+<p> there are two types in generic</p>
+      <em> <ul>GENERIC CLASS</ul>
+	<ul>GENERIC METHOD</ul></em>
+
+
+<p><b>GENERIC CLASS</b></p>
+   
+  <p>
+   <strong>
+     class A<T1,T2><br>
+    {<br>
+	T1 a;<br>
+	T2 b;<br>
+	public void set(T1 x,T2 y)<br>
+ 	 {<br>
+		a=x;<br>
+		b=y:<br>
+	   }<br>
+       public T1 send a();<br>
+	{<br>
+		return(a);<br>
+	  }<br>
+  public Void print()<br>
+	{<br>
+		System.out.println("a value is :"+a);<br>
+		Syatem.out.println("B value is :"+b);<br>
+	  }<br>
+  public static void main(String arr[])<br>
+    {<br>
+	A<Integer,String> obj=new A<Integer,String>();<br>
+	obj.set(12,"App");<br>
+	System.out.println(obj.send a());<br>
+         obj.print();<br>
+	}<br>
+   }<br>
+ </strong>
+</p>
+
+<p><b>GENERIC METHOD</b></p>
+
+<p>
+  <strong>
+     class A<br>
+	{<br>
+	   <E> Void print(E a)<br>
+	   {<br>
+	   	System.outprintln("a value is :"+a);<br>
+	    }<br>
+ 	public static void main(String arr[])<br>
+	{<br>
+	 Main obj=new Main();<br>
+	 Main obj1=new Main();<br>
+	 obj.print(12);<br>
+	 obj1.print("VIGNESH");<br>
+        }<br>
+      }<br>
+     </strong>
+  </p>
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+<footer>
+  <h10 id="C10">EXCEPTION HANDLING</h10>
+  </footer>
+  <p>  </p>
+<p>  public Class Vickram<br>
+	{<br>
+	   public Static void main(String ar[])<br>
+	     {<br>
+              try<br>
+	       {<br>
+		int v=5;<br>
+		int w=0;<br>
+		int m[]=new int[2];<br>
+		String p=null;<br>
+		System.out.println(v/w);<br>
+		System.out.println(p.length());<br>
+		m[3]=6;<br>
+	     }<br>
+      catch(ArithmeticException n)<br>
+	{<br>
+		System.out.println(n);<br>
+	  }<br>
+      catch(NullpointerException l)<br>
+	{<br>
+		System.out.println(l);<br>
+	  }<br>
+      catch(ArrayIndexOutofBoundException k)<br>
+	{<br>
+		System.out.println(k);<br>
+	  }<br>
+	System.out.println("HELLO CSE");<br>
+      }<br>
+     }<br>
+
+</p>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+
+
+<footer>
+   <h11 id="C11">USER DEFINED EXCEPTION</h11>
+  </footer>
+<p>   
+   </p>
+<p>
+   import java.util.*;<br>
+   class YKSException extends Exception<br>
+     {<br>
+	YKSException(String S)<br>
+	 {<br>
+	   Super(s);<br>
+	  }<br>
+      }<br>
+   public class  Main<br>
+     {<br>
+      void Current(String a)throws Exception   //(we can keep any name as exception name)
+	{<br>
+	 if(a.equals("TAMIL NADU"))<br>
+	  {<br>
+	    System.out.println("EQUAL");<br>
+	   }<br>
+	else<br>
+	 { <br>
+	  throw new YKSExecption("NOT NULL");<br>
+	   }<br>
+	}<br>
+  public static void main(string arr[])<br>
+	{<br>
+ 	  Scanner sc = new scanner(System.in);<br>
+	  String s=sc.nextLine();<br>
+	  try<br>
+	    {<br>
+		Main ab=new Main();<br>
+		ab.Current(S);<br>
+	      }<br>
+	catch(YKSException e)<br>
+        {<br>
+		System.out.println("HANDLED");<br>
+		System.out.println(e);<br>
+	 }<br>
+       }   <br>
+</p>
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+<footer>
+  <h12 id="C12">IMPLEMENTATION OF MULTITHREAD AND  RUNNABLE INTERFACE</h12>
+</footer>
+
+<p>Thread class</p>
+<p>
+   class Suriya extends Thread<br>
+    {<br>
+      public void run()<br>
+	{<br>
+	 for(i=0;i<5;i++)<br>
+	 {<br>
+	  System.out.println(i);<br>
+	  }<br>
+	}<br>
+	try<br>
+	 {<br>
+	   sleep(1000);<br>
+	  }<br>
+	catch(InterruptedException x)<br>
+	 {<br>
+	  }<br>
+    class Vikram extends Thread<br>
+       {<br>
+	 public void run()<br>
+	 {<br>
+	   for(i=0;i<=15;i++)<br>
+	    {<br>
+		System.out.println(i);  <br>
+	    }<br>
+	}<br>
+	try<br>
+	 {<br>
+	   sleep(1000);<br>
+	  }<br>
+	catch(InterruptedException s)<br>
+	 {<br>
+	  }<br>
+ 	}<br>
+   class vignesh<br>
+    {<br>
+     public static void main(String arr[])<br>
+	{<br>
+	  vikram obj=new Vikram();<br>
+           obj.start();<br>
+  	  suriya obj=new Suriya();<br>
+	   obj1.start();<br>
+	}<br>
+     }<br>
+
+
+<p><b>RUNNABLE INTERFACE</B></P><br>
+
+   class A implements Runnable<br>
+   {<br>
+    for(i=0;i<3;i++)<br>
+	{<br>
+	 System.out.println(i);<br>
+	 }<br>
+	try<br>
+	{<br>
+	 Thread.sleep(1000);<br>
+	 }<br>
+	catch(InterruptedExceptiion x)<br>
+	{<br>
+	 }<br>
+	}<br>
+     }<br>
+  public class Suriya<br>
+  {<br>
+   public static void main(string arr[])<br>
+	{<br>
+ 	 A a=new A();<br>
+	 Thread obj = new Thread(a);<br>
+	 Thread obj1= new Thread(a);<br>
+	 obj.Start();<br>
+	 obj1.Start();<br>
+	}<br>
+  }<br>
+
+</p>
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+<footer>
+ <h13 id="C13">INTERTHREAD COMMUNCATION</h13>
+</footer>
+<p>
+   </p>
+<p>
+   class Account<br>
+   {<br>
+    double balance=1000000;<br>
+    public Sychronized double withdraw(double amt)<br>
+     {<br>
+	System.out.println("WITHDRAW STARTS");<br>
+	System.out.println("BEFORE WITHDRAW BLANCE"+balance);<br>
+ 	 if(balance<amt)<br>
+	 {<br>
+	  System.out.println("INSUFFICIENT BALANCE WAITING FOR DEPOSIT");<br>
+ 	   try<br>
+ 	    {<br>
+	      Wait();<br>
+	     }<br>
+    catch(InterruptedException e)<br>
+	{<br>
+	 }<br>
+	balance=balance-amt;<br>
+	System.out.println("After withdrawl BALANCE IS"+balance);<br>
+	return(balance);<br>
+      }<br>
+ public Synchronized void deposit(double amt)<br>
+   {<br>
+	System.out.println("Deposite process starts");<br>
+	  balance=balance+amt;<br>
+	system.out.println("After deposit the balance"+balance);<br>
+	notify();<br>
+      }<br>
+   }<br>
+
+  class InterThread<br>
+   {<br>
+    public Static void main()<br>
+    {<br>
+	Account acc=new Account();<br>
+	new Thread();<br>
+	{<br>
+	 public void run();<br>
+	  {<br>
+	   acc.depodit(1000);<br>
+	  }<br>
+         }.start();<br>
+    }<br>
+ } <br>
+</p>          
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+
+<footer>
+  <h14 id="C14">IMPLEMENTATION OF ARRAY LIST</h14>
+</footer>
+<p>
+   </p>
+<p>
+ public class ArrayList<br>
+ {<br>
+  public Static void main(string arr[])<br>
+  {<br>
+   arrayList <String> al=newArrayList <String>();<br>
+	al.add("VIGNESH");<br>
+	al.add("DEEPAK");<br>
+	al.add("BARATH");<br>
+	SyStem.out.println(al);<br>
+	system.out.println(al.size());<br>
+      for(int i=0;i<al.sixe();i++)<br>
+    {<br>
+     System.out.println(Al.get(i));<br>
+	}<br>
+	al.chear();<br>
+	System.out.println(al.contains(10));<br>
+	System.out.println(al);<br>
+	}<br>
+    }<br>
+</p>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+<footer>
+  <h15 id="C15">IMPLEMENTATION OF TREESET</h15>
+</footer>
+ 
+<p>
+   
+
+  </p>
+
+
+<p>
+  class A<br>
+  {<br>
+     public static void main(String ar[])<br>
+     {<br>
+       TreeSet <String> Yk=new Treeset<String>();<br>
+	Yk.add("BARATH");<br>
+	Yk.add("GOKUL");<br>
+	Yk.add("SANTHOSH");<br>
+	Yk.add("SHASHAGAN");<br>	
+	Yk.add("BOOPASH");<br>
+      Iterator<String> itr=Yk.Iterartor();<br>
+      while(itr.hasNext())<br>
+      {<br>
+	System.out.println(itr.next());<br>
+       }<br>
+     }<br>
+    }<br>
+  }<br>
+</p>
+
+<p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+<br>
+<br>
+<br>
+
+
+
+
+
+<footer>
+  <h16 id="C16">APPLET</h16>
+ </footer>
+
+
+<p>  
+  import java.applet.*;<br>
+  import java.awt.*;<br>
+  import java.awt.event.*;<br>
+  Public Class MouseEvent extends Applet implemets MouseListner,Mouse Motion Listner<br>
+  {<br>
+    int x=30;<br>
+    int y=30;<br>
+    String msg="MOUSE EVENT";<br>
+     public void init()<br>
+      {<br>
+	add mouseListener(this);<br>
+	add motionListener(this);<br>
+       }<br>
+    public void mouseEntered(mouseEvent me()<br>
+  {<br>
+     setBackground(color.yellow);<br>
+     showstatus("Mouse was entered");<br>
+     repaint();<br>
+    }<br>
+   public void mouse Exited(mouseEvent me)<br>
+    {<br>
+	setBackground(color.Red);<br>
+ 	showStstus("Mouse was Excited");<br>
+	repaint();<br>
+     }<br>
+  public void mouse Moved(MouseEvent me)<br>
+   {<br>
+	x=me.getx();<br>
+     	y =me..gety();<br>
+  	setBackground(colo.Orange);<br>
+	ShowStatus("Mouse was moved"+x+" "+y);<br>
+ 	repaint();<br>
+     }<br>
+  public void MouseDragged(4mouseEvent me)<br>
+    {<br>
+     	set.background(color.pink);<br>
+	showStatus("Mouse dragged at"+me.getx()+" "+me.gety());<br>
+	repaint();<br>
+      }<br>
+ public void mouse clicked(mouseEvent me)<br>
+    {<br>
+	setBaackground(color.Magneta);<br>
+	showstatus("Mouse was clicked");<br>
+  	repaint();<br>
+      }<br>
+ Public void paint(graphics.g)<br>
+    {<br>
+   	g.drawstring(msg,100,200);<br>
+	}<br>
+   }	<br>
+
+</p>
+
+
+
+
+<footer>
+  <h17 id="C17">EVENT HANDLING</h17>
+  </footer>
+<p>
+  </p>
+ <p>
+
+  import java.applet.*;<br>
+   import java.awt.*;<br>
+   public Class Actionlistner Example extends Applet implements ActionListener<br>
+    {<br>
+      String str="Press any button";<br>
+      Label l=new Label("Click me");<br>
+      Button b1=new Button("Open");<br>
+      Button b2=new Button("close");<br>
+      Button b3=new Button("cancel");<br>
+    public void init()<br>
+    {<br>
+      add(b1);<br>
+      add(b2);<br>
+      add(b3);<br>
+      add(l);<br>
+      b3.add ActionListener(this);<br>
+      b1.add ActionListener(this);<br>
+      b2.add ActtionListener(this);<br>
+     }<br>
+   public void print(graphics g)<br>
+    {<br>
+      g.drawString(str,50,50);<br>
+      }<br>
+   public void actionperformed(action Event ae)<br>
+    {<br>
+	if(ae.getsource()==b1)<br>
+	{<br>
+	  str="you have clicked open button";<br>
+	  l.settext("I am WAITING");<br>
+	}<br>
+        elseif(ae.getSource()==b2)<br>
+	  str="you have clicked closed button";<br>
+        elseif(ae.getSource()==b3)<br>
+	  str="you have clicked cancel button";<br>
+       repaint();<br>
+     }<br>
+
+
+</p>
+
+<footer>
+<h18 id="C18">CALCULATOR PROGRAM</h18>		
+  </footer>
+<p>
+import java.applet.*;<br>
+import java.awt.*;<br>
+import java.awt.event.ActionEvent;<br>
+import java.awt.event.ActionListener;<br>
+import java.awt.event.TextEvent;<br>
+import java.awt.event.TextListener;;<br>
+public class calculator extends Applet implements ActionListener, TextListener<br>
+
+{<br>
+ String s,s1,s2,s3,s4;<br>
+ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0;<br>
+ Button add,sub,eq,cl,mul,div;<br>
+ TextField t1;<br>
+ int a,b,c;<br>
+ 
+ public void init()<br>
+ {<br>
+  t1=new TextField(10);<br>
+  b1=new Button("1");<br>
+  b2=new Button("2");<br>
+  b3=new Button("3");<br>
+  b4=new Button("4");<br>
+  b5=new Button("5");<br>
+  b6=new Button("6");<br>
+  b7=new Button("7");<br>
+  b8=new Button("8");<br>
+  b9=new Button("9");<br>
+  b0=new Button("0");<br>
+  add=new Button("+");<br>
+  sub=new Button("-");<br>
+  mul=new Button("*");<br>
+  div=new Button("/");<br>
+  eq=new Button("=");<br>
+  cl=new Button("Clear");<br>
+  
+  
+  
+  GridLayout gb=new GridLayout(4,5);<br>
+  setLayout(gb);<br>
+  
+
+  add(t1);<br>
+  add(b1);<br>
+  add(b2);<br>
+  add(b3);<br>
+  add(b4);<br>
+  add(b5);<br>
+  add(b6);<br>
+  add(b7);<br>
+  add(b8);<br>
+  add(b9);<br>
+  add(b0);<br>
+  add(add);<br>
+  add(sub);<br>
+  add(mul);<br>
+  add(div);<br>
+  add(eq);<br>
+  add(cl);<br>
+  
+  b1.addActionListener(this);<br>
+  b2.addActionListener(this);<br>
+  b3.addActionListener(this);<br>
+  b4.addActionListener(this);<br>
+  b5.addActionListener(this);<br>
+  b6.addActionListener(this);<br>
+  b7.addActionListener(this);<br>
+  b8.addActionListener(this);<br>
+  b9.addActionListener(this);<br>
+  b0.addActionListener(this);<br>
+  add.addActionListener(this);<br>
+  sub.addActionListener(this);<br>
+  mul.addActionListener(this);<br>
+  div.addActionListener(this);<br>
+  eq.addActionListener(this);<br>
+  cl.addActionListener(this);<br>
+  paint();<br>
+  //t1.addTextListener(this);<br>
+ }<br>
+ public void paint()<br>
+ {<br>
+  setBackground(Color.green);<br>
+ }<br>
+ 
+ public void actionPerformed(ActionEvent e)<br>
+ {<br>
+  s=e.getActionCommand();<br>
+  if(s.equals("0")||s.equals("1")||s.equals("2")||<br>s.equals("3")||s.equals("4")||s.equals("5")||s.equals("6")||s.equals("7")||s.equals("8")||s.equals("9")||s.equals("0"))<br>
+  {<br>
+   s1=t1.getText()+s;<br>
+   t1.setText(s1);<br>
+  }<br>
+  if(s.equals("+"))<br>
+  {<br>
+     s2=t1.getText();<br>
+     t1.setText("");<br>
+     s3="+";<br>
+  }<br>
+  if(s.equals("-"))<br>
+  {<br>
+     s2=t1.getText();<br>
+     t1.setText("");<br>
+     s3="-";<br>
+  }<br>
+  if(s.equals("*"))<br>
+  {<br>
+     s2=t1.getText();<br>
+     t1.setText("");<br>
+     s3="*";<br>
+  }<br>
+  if(s.equals("*"))<br>
+  {<br>
+     s2=t1.getText();<br>
+     t1.setText("");<br>
+     s3="*";<br>
+  }<br>
+  if(s.equals("="))<br>
+  {<br>
+   s4=t1.getText();<br>
+   a=Integer.parseInt(s2);<br>
+   b=Integer.parseInt(s4);<br>
+   if(s3.equals("+"))<br>
+    c=a+b;<br>
+   if(s3.equals("-"))<br>
+    c=a-b;<br>
+   
+   t1.setText(String.valueOf(c));<br>
+  }<br>
+  if(s.equals("Clear"))<br>
+  {<br>
+   t1.setText("");<br>
+  }<br>
+ }<br>
+ public void textValueChanged(TextEvent e)<br>
+ {<br>
+  
+ }<br>
+}<br>
+</p>
+
+
+
+</div>
+</body>
+</html>

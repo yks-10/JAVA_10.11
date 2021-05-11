@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNIT TWO</title>
+
+<!-- CSS -->
+<style>
+
+
+    nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:22px;
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 120px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+
+</style>
+</head>
+<header> <H1><b>UNIT 2</b></p>
+</header>
+<p>             </p>
+<body>
+
+<!-- HTML -->
+<div class="sidenav">
+  <div class="myBox">
+      <p><a href="#C1">INHERITANCE</a></p>
+      <p><a href="#C2">INTERFACE</a></p>
+      <p><a href="#C3">DEFAULT INTERFACE METHOD</a></p>
+      <p><a href="#C4">POLYMORPHISM</a></p>
+      <p><a href="#C5">PACKAGES</a></p>
+      <p><a href="#C6">STRING HANDLING</a></p>
+      <br>
+      <p><a href="index.html"><b>HOME</b></a></p>
+  </div>
+</div>
+<div class="main">
+<ul>
+              <ul>
+<footer>
+<h2 id="C1">INHERTANCE</h2>
+</footer>
+<p><b>INHERITANCE</b></p>
+<p>It is the process of the deriving the states and behavior(attributes and methods) from one class into another class .This is achived by using extends keyword</p>
+<p>Who is giving:Base class or parent class or super class</p>
+<p>Who is acquiring:Derived class or Child class or Sub Class</p>
+<p><strong>Uses</strong></p>
+    <p>It provides code reuseability.<br>It is used to achive run time polymorphism.</p>
+  <p><strong>Types of Inheritance</strong></p>
+    <ul>
+      <li>Single Inheritance</li>
+      <li>Multilevel Inheritance</li>
+      <li>Hierarchical Inheritance</li>
+      <li>Multiple Inheritance</li>
+      <li>Hybrid Inheritance</li>
+    </ul>
+<img src="in1.JPG"><br>
+<img src="in2.JPG">
+
+<p><b>SINGLE INHERITANCE:</b></p>
+<P>      Single inheritance enables a derived class to inherit properties and behavior from a single parent class.</P>
+<p><B>Program for single level inheritance:</B></p>
+<p><strong>class Animal{<br>  
+void eat(){System.out.println("eating...");}<br>  
+}<br>
+class Dog extends Animal{<br>
+void bark(){System.out.println("barking...");}<br>
+}<br>
+class TestInheritance{<br>
+public static void main(String args[]){<br> 
+Dog d=new Dog();<br>
+d.bark();<br>
+d.eat();<br>
+}}</strong></p>
+
+
+<p><b>MULTILEVEL INHERITANCE:</b></p>
+<P>Multilevel inheritance refers to a mechanism in OO technology where one can inherit from a derived class, thereby making this derived class the base class for the new class.</p>
+<p><B>Program for multilevel inheritance:</B></p>
+<p><strong>class Animal{<br>
+void eat(){System.out.println("eating...");}  <br>
+}  <br>
+class Dog extends Animal{  <br>
+void bark(){System.out.println("barking...");} <br> 
+}  <br>
+class BabyDog extends Dog{  <br>
+void weep(){System.out.println("weeping...");}  <br>
+}  <br>
+class TestInheritance2{  <br>
+public static void main(String args[]){  <br>
+BabyDog d=new BabyDog();  <br>
+d.weep();  <br>
+d.bark();  <br>
+d.eat();  </strong></p>
+}}</strong></p>
+<p><b>Hierarchical Inheritance:</b></p>
+<p>When more than one classes inherit a same class then this is called hierarchical inheritance.</p> 
+<p> In Hierarchical Inheritance, one class serves as a superclass (base class) for more than one sub class.<br>
+In below image, the class A serves as a base class for the derived class B,C and D.In java, we can achieve multiple inheritance only through Interfaces.</p>
+<p><strong>Program for Hierarchical inheritance:</strong></p>
+<p><strong>class Animal{  <br>
+void eat()<br>
+{<br>
+System.out.println("eating...");}  <br>
+}  <br>
+class Dog extends Animal{  <br>
+void bark(){System.out.println("barking...");<br>
+}  <br>
+}  <br>
+class Cat extends Animal{  <br>
+void meow(){System.out.println("meowing...");<br>
+}<br>  
+}  <br>
+class TestInheritance3{  <br>
+public static void main(String args[])<br>
+{<br>  
+Cat c=new Cat();  <br>
+c.meow();  <br>
+c.eat();    <br>
+}}  </strong></p>
+
+
+<h1>2m.Why multiple inheritance is not supported in java?</h1>
+<p>If the two class have the same method.when  we will excecute the program ,it will shows the ambiguity problem.</p>
+<p><b>MULTIPLE INHERITANCE:</B></P>
+<P>   Multiple inheritance in java is the capability of creating a single class with multiple superclasses.</P>
+<p><b>Program for multiple Inheritance</b></p>
+<p><strong>interface if1<br>
+{<br>
+public static final inta a=5;<br>
+public static final inta b=10;<br>
+void sqr()<br>
+}<br>
+interface if2<br>
+{<br>
+  public static final int s=6;<br>
+  public static final int u=2;<br>
+ void add(int k,int l);<br>
+}<br>
+Class intefaceex Implements if1,if2<br>
+{<br>
+ public void sqr()<br>
+{<br>
+ system.out.println(a*a);<br>
+}<br>
+public void add()<br>
+{<br>
+ System.out.println(k+l);<br>
+ System.out.println("the adition of S and u is"+" "+(s+u));<br>
+ public static void main(String ar[])<br>
+{<br>
+ interfaceex obj=new interfaceex();<br>
+ obj.sqr();<br>
+ obj.add(5,6);<br>
+}<br>
+}</strong></p> 
+<p><b>HYBRID INHERITANCE:</b><p>
+<p>   A hybrid inheritance in Java is a combination of single and multiple inheritance.</p>
+<p><b>Program for Hybrid Inheritance:</b></p>
+<p><strong>public class ClassA<br> 
+{<br>
+    public void dispA()<br>
+    {<br>
+        System.out.println("disp() method of ClassA");<br>.
+    }<br>
+}<br>
+public class ClassB extends ClassA<br> 
+{<br>
+    public void show()<br>
+    {<br>
+        System.out.println("show() method of ClassB");<br>
+    }<br>
+    public void dispB()<br>
+    {<br>
+        System.out.println("disp() method of ClassB");<br>
+    }<br>
+}<br>
+public class ClassC extends ClassA<br>
+{<br>
+    public void show()<br>
+    {<br>
+        System.out.println("show() method of ClassC");<br>
+    }<br>
+    public void dispC()<br>
+    {<br>
+        System.out.println("disp() method of ClassC");<br>
+    }<br>
+}<br>
+public class ClassD extends ClassB,ClassC<br>
+{<br>
+    public void dispD()<br>
+    {<br>
+        System.out.println("disp() method of ClassD");<br>
+    }<br>
+    public static void main(String args[])<br>
+    {<br>
+          ClassD d = new ClassD();<br>
+          d.dispD();<br>
+          d.show();<br>
+    }<br>
+}</strong></p>
+
+<footer>
+<h2 id="C2">INTERFACE</h2>
+</footer>
+<p>Interface is similar to class.<br>it providesx 100% abstraction</p>
+<p><strong>Eg:<br>
+  interface if1<br>
+  {<br>
+  void add();<br>
+  }</strong></p>
+<p>The interface with hold only <i>public static final variable.</i></p>
+<p>If it is a method public,Abstract.<br>It is used to achive multiple interface.</p>
+<p><b>Eg :<br>
+  interface if1<br>
+  {<br>
+   public static final int a=10;<br>
+   public static final int b=10;<br>
+   public  abstract void add(); <br>
+}<br></b></p>
+<h2><b>ABSTRACTION</b></h2>
+<p> The Abstraction in Java is achieved by abstract class and interface.</p>
+<p><b>Abstract class</b></p>
+<p>Abstract class hava both abstract method and abstract methods.<br>a class which is declared with abstract keyword is called Abstract class.</p>
+<p>We should not create objects for adstract class.For inheritance sub class only we will create the objects.Go call was abstract method which is present in the abstract class.</p>
+<p>By using abstraction we will achives 0-100% of abstractions.<br>Abstraction class can have final methods constructor and Static methods.</p>
+<p><b>Eg:</b></p>
+<p><strong>abstract Class A<br>
+{<br>
+ void add();<br>
+ {<br>
+  System.out.println("ADD");<br>
+}<br>
+abstract void sub();<br>
+}<br>
+Class B extents A<br>
+{<br>
+ void sub()<br>
+ {<br>
+  System.out.println("SUB");
+ }<br>
+public static void main(String SW[])<br>
+{<br>
+ B.obj=new B();<br>
+ obj.sub();<br>
+ obj.add();<br>
+}<br>
+}</strong></p>
+
+
+<footer>
+<h2 id="C3">DEFAULT INTERFACE METHOD:</h2>
+</footer>
+<P> JAVA 1.8 provides the facility to define or create default methods inside the interface.<br>The methods which are defined inside the interface is tagged with default keyword is called default interface method.</P>
+<p><b>Program for Default Interface Method:</b></p>
+<p><strong>interface if<br>
+{<br>
+ default void sub()<br>
+{<br>
+System.out.println("hi");<br>
+}<br>
+}<br>
+puplic class super implement if<br>
+{<br>
+public static void main(string ar[])<br>
+{<br>
+  super obj=new spr();<br>
+  obj.sub();<br>
+}<br>
+}</strong></p>
+
+
+
+<footer>
+<h2 id="C4">POLYMORPHISM</h2>
+</footer>
+<p>   Poly means many,morphism means forms.<br>
+        The ability to represent more than one forms.
+</P>
+<p><b>EX:</b></p>
+<p>    One person with different behaviours.</p>
+<p>The polymorphism is achieved in two different ways.They are
+<ul>
+  <li>Compile time polymorphism or Early binding or Static polymorphism </li>
+  <li>Runtime Polymorphism or Late Binding</li>
+</ul>
+<h2>OVERLOADING:</h2>
+<P>   Overloading contains three varieties.They are</P>
+<p><ul>
+   <li>Method Overloading</li>
+   <li>Constructor Overloading</li>
+   <li>Operator Overloading</li>
+</ul></p>
+<h2>METHOD OVERLOADING:</h2>
+<P>   A class contain more than one method with same name and different no of arguments <br>
+(or) with same no of argument with different datatype</P>
+<P><b>EG:</b></p>
+<P>
+    class A<br>
+{<br>
+ int add(int a,int b)<br>
+{<br>
+ return(a+b);<br>
+}<br>
+int add(int a,float b)<br>
+{<br>
+ return(a+b);<br>
+}<br>
+public static void main(String ar[])<br>
+{<br>
+  A obj=new A();<br>
+  System.out.println(obj.add(5,10.5f));<br>
+  System.out.println(obj.add(5,5));<br>
+}<br>
+}</P>
+<h2>METHOD OVERRIDING</h2>
+<P>
+     If a subclass has a same method as declared in the parent class is called method overriding.
+<p><b>RULES:</b>
+     The subclass method name should be same as a parent class method.
+     The method must have the same parameters as in the parent class.
+<b>USES:</b>
+   <p>  It is used to provide the specific implementation of a <br> method which is already provided by its super class.</p>
+<p><b>Program for Method Overriding:</b></p>
+<P>
+   class Vehicle{  <br>
+  //defining a method  <br>
+  void run(){System.out.println("Vehicle is running");}  <br>
+}  <br>
+//Creating a child class  <br>
+class Bike2 extends Vehicle{  <br>
+  //defining the same method as in the parent class  <br>
+  void run(){System.out.println("Bike is running safely");}  <br>
+  
+  public static void main(String args[]){  <br>
+  Bike2 obj = new Bike2();//creating object  <br>
+  obj.run();//calling method  <br>
+  }  <br>
+}  </P>
+
+<footer>
+<h2 id="C5">PACKAGES</h2>
+</footer>
+
+<p>A java package is a group of similar types of classes, interfaces and sub-packages.<br>
+Package in java can be categorized in two form, built-in package and user-defined package.<br>
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+<br>
+</p>
+
+<p><b>Advantage of package</b></p>
+  <ul>
+    <li>Java package is used to categorize the classes and interfaces so that they can be easily maintained.</li>
+    <li> Java package provides access protection.</li>
+    <li>Java package removes naming collision.</li>
+  </ul>
+
+
+
+<p> example for creating package in java </p>
+   <p> use package as a key word and give a name for a package </p>
+   <p><b>package</b> vikram</p>
+  
+ <p> Example program </p>
+  <p><strong>
+     package vikram;<br>
+     public class Simple{<br>
+       public static void main(String ar[])<br>
+       {<br>
+          System.out.println("HAPPY WITH PACKAGE");<br>
+         }<br>
+      }<br>
+
+   </strong></p>
+
+
+<p><b>ACCESSING PACKAGE FROM ANOTHER PACKAGE</b></p>
+    <ul>
+      <li>import package.*;</li>
+      <li>import package.classname;</li>
+      <li>fully qualified name.</li>
+    </ul>
+
+<p><strong>import package.*;</strong></p>
+   </p>If you use package.* then all the classes and interfaces of this package will be accessible but not subpackages.
+  The import keyword is used to make the classes and interface of another package accessible to the current package.</p>
+ 
+<p>Example</p>
+<p><strong>    package pack;  //the new package we created<br>
+  public class A{  <br>
+   public void msg(){System.out.println("Hello");}  <br>
+   }  <br>
+  
+   package mypack;  <br>
+   import pack.*; //in this we imported the package <b>pack</b><br>
+   class B{  <br>
+   public static void main(String args[]){  <br>
+    A obj = new A();  <br>
+   obj.msg();  <br>
+  }  <br>
+}  <br></strong></p>
+
+
+
+
+
+
+<p><strong >import package.classname;</strong></p>
+  <p>If you import package.classname then only declared class of this package will be accessible.</p>
+
+ <p><strong> package pack;  <br>
+    public class A<br>
+    {  <br>
+  public void msg() <br>
+  { <br>
+  System.out.println("Hello");<br>
+}  <br>
+}  <br>
+<br>
+
+package mypack;  <br>
+import pack.A;  <br>
+  
+class B{ <br> 
+  public static void main(String args[]){ <br> 
+   A obj = new A();  <br>
+   obj.msg();  <br>
+  }  <br>
+}  <br>
+ </strong></p>
+<br>
+
+<br>
+
+<p><strong>fully qualified name.</strong></p>
+  <p>If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified name every time when you are accessing the class or interface.
+
+<br>It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.
+</p>
+
+<p><b>EXAMPLE</b></p>
+
+<p><strong>package pack;<br>  
+public class A<br>
+{  <br>
+  public void msg()<br>
+{<r>
+System.out.println("Hello");<br>
+}  <br>
+}  <br>
+
+<br><br>
+package mypack; <br> 
+class B{  <br>
+  public static void main(String args[])<br>
+{  <br>
+   pack.A obj = new pack.A();//using fully qualified name  <br>
+   obj.msg();  <br>
+  }  <br>
+}  <br>
+
+</strong></p>
+
+
+<p><a href="https://www.javatpoint.com/package">FOR MORE about sub packages</a></p>
+
+
+<p>
+
+</p>
+
+<footer>
+<h2 id="C6">STRING HANDLING</h2>
+</footer>
+<p>String can be handeled by the methods</p>
+
+<p><strong>Java String Methods</strong></p>
+
+
+
+
+
+<p><b>Java String length():</b> The Java String length() method tells the length of the string. It returns count of total number of characters present in the String.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>public class Example{<br>
+public static void main(String args[]{ <br>
+String s1="hello"; <br>
+String s2="whatsup"; <br>
+System.out.println("string length is: "+s1.length());  <br>
+System.out.println("string length is: "+s2.length()); <br>
+}}<br>
+<br>
+<br>
+<br>
+
+</strong></p>
+<br>
+<br>
+
+
+
+
+<p><b>Java String compareTo():</b> The Java String compareTo() method compares the given string with current string. It is a method of ‘Comparable’ interface which is implemented by String class.<br>
+ Don’t worry, we will be learning about String interfaces later. It either returns positive number, negative number or 0. </p>
+<p><b>EXAMPLE</b></p>
+
+<p><strong>public class CompareToExample{ <br>
+public static void main(String args[]){ <br>
+String s1="hello";<br>
+String s2="hello"; <br>
+String s3="hemlo"; <br>
+String s4="flag";<br>
+System.out.println(s1.compareTo(s2)); // 0 because both are equal<br>
+System.out.println(s1.compareTo(s3)); //-1 because "l" is only one time lower than "m" <br>
+System.out.println(s1.compareTo(s4)); // 2 because "h" is 2 times greater than "f"<br>
+}} <br>
+</strong>
+
+This program shows the comparison between the various string. It is noticed that  <br>
+if s1 > s2, it returns a positive number  <br>
+if s1 < s2, it returns a negative number <br>
+if s1 == s2, it returns 0</p>
+<br>
+<br>
+
+
+<p><b>Java String concat() :</b> The Java String concat() method combines a specific string at the end of another string and ultimately returns a combined string. It is like appending another string.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>public class ConcatExample{<br>
+public static void main(String args[]){<br>
+String s1="hello";<br>
+s1=s1.concat("how are you");<br>
+System.out.println(s1);<br>
+}}<br>
+</strong>
+The above code returns “hellohow are you”.</p>
+
+<p><b>Java String IsEmpty() : </b>This method checks whether the String contains anything or not. If the java String is Empty, it returns true else false.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class IsEmptyExample{ <br>
+public static void main(String args[]){ <br>
+String s1=""; <br>
+String s2="hello";<br> 
+System.out.println(s1.isEmpty());    // true <br> 
+System.out.println(s2.isEmpty());     // false <br> 
+}}<br>
+<br>
+</strong></p>
+
+
+
+<p><b>Java String Trim() </b>: The java string trim() method removes the leading and trailing spaces. <br>It checks the unicode value of space character (‘u0020’) before and after the string. If it exists, then removes the spaces and return the omitted string. </p>
+
+
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class StringTrimExample{  <br>
+public static void main(String args[]){<br>
+String s1="  hello   ";  <br>
+System.out.println(s1+"how are you");       // without trim()   <br>
+System.out.println(s1.trim()+"how are you");// with trim()  <br> 
+}}  <br>
+</strong>
+In the above code, the first print statement will print “hello how are you” while the second statement will print “hellohow are you” using the trim() function.
+</p>
+<br>
+<br>
+
+
+<p><b>
+Java String toLowerCase() </b>: The java string toLowerCase() method converts all the characters of the String to lower case. <p>
+<p><b>EXAMPLE</b>
+<p><Strong>
+public class StringLowerExample{<br>
+public static void main(String args[]){<br>
+String s1="HELLO HOW Are You?”;<br>
+String s1lower=s1.toLowerCase();<br>
+System.out.println(s1lower);}<br>
+}<br>
+</strong>
+The above code will return “hello how are you”.
+</p>
+<br>
+<br>
+
+<p><b>Java String toUpper()</b> : The Java String toUpperCase() method converts all the characters of the String to upper case. <br></p>
+<p><b>EXAMPLE</b></p>
+
+
+<p><srong>
+public class StringUpperExample{  <br>
+public static void main(String args[]){<br>  
+String s1="hello how are you";  <br>
+String s1upper=s1.toUpperCase();  <br>
+System.out.println(s1upper);  <br>
+}}<br>
+</strong>
+The above code will return “HELLO HOW ARE YOU”.</p>
+
+<br>
+<br>
+
+<br>
+<p><b>
+Java String ValueOf()</b>: This method converts different types of values into string.Using this method, you can convert int to string, long to string, <br>
+Boolean to string, character to string, float to string, double to string, object to string and char array to string. The signature or syntax of string valueOf() method is given below:<br>
+public static String valueOf(boolean b)<br>
+public static String valueOf(char c)<br>
+public static String valueOf(char[] c)<br>
+public static String valueOf(int i)<br>
+public static String valueOf(long l)<br>
+public static String valueOf(float f)<br>
+public static String valueOf(double d)<br>
+public static String valueOf(Object o)<br>
+</p>
+<p><strong>
+public class StringValueOfExample{<br>
+public static void main(String args[]){<br>
+int value=20; <br>
+String s1=String.valueOf(value);<br> 
+System.out.println(s1+17);       //concatenating string with 10 <br>
+}}<br>
+</strong>
+In the above code, it concatenates the Java String and gives the output – 2017.</p>
+
+<br>
+<br>
+
+
+<p><b>Java String replace()</b>: The Java String replace() method returns a string, replacing all the old characters or CharSequence to new characters.
+ There are 2 ways to replace methods in a Java String.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class ReplaceExample1{<br>
+public static void main(String args[]){<br> 
+String s1="hello how are you"; <br>
+String replaceString=s1.replace('h','t'); <br>
+System.out.println(replaceString); }}<br>
+<br>
+</strong>
+
+In the above code, it will replace all the occurrences of ‘h’ to ‘t’. Output to the above code will be “tello tow are you”. Let’s see the another type of using replace method in java string:
+</p>
+
+
+
+<p>
+<b>Java String replace(CharSequence target, CharSequence replacement) method :</b></p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class ReplaceExample2{ <br>
+public static void main(String args[]){<br> 
+String s1="Hey, welcome to Edureka"; <br>
+String replaceString=s1.replace("Edureka","Brainforce"); <br>
+System.out.println(replaceString); <br>
+}}<br>
+</strong>
+In the above code, it will replace all occurrences of “Edureka” to “Brainforce”. Therefore, the output would be “ Hey, welcome to Brainforce”.
+</p>
+<br>
+<br>
+
+<p><b>
+Java String contains()</b> :The java string contains() method searches the sequence of characters in the string.
+ If the sequences of characters are found, then it returns true otherwise returns false.</p>
+
+<p><b>EXAMPLE</b></p>
+<p><strong>class ContainsExample{ <br>
+public static void main(String args[]){<br> 
+String name=" hello how are you doing"; <br>
+System.out.println(name.contains("how are you"));  // returns true<br>
+System.out.println(name.contains("hello"));        // returns true  <br>
+System.out.println(name.contains("fine"));         // returns false  <br>
+}}<br>
+</strong>
+In the above code, the first two statements will return true as it matches <br>
+the String whereas the second print statement will return false because 
+the characters are not present in the string.
+</p>
+
+<br>
+<br>
+
+<p><b>
+Java String equals()</b> : The Java String equals() method compares the two given strings on the basis of content of the string i.e Java String representation.<br>
+ If all the characters are matched, it returns true else it will return false. </p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class EqualsExample{ <br>
+public static void main(String args[]){<br> 
+String s1="hello"; <br>
+String s2="hello"; <br>
+String s3="hi";<br>
+System.out.println(s1.equalsIgnoreCase(s2));   // returns true<br>
+System.out.println(s1.equalsIgnoreCase(s3));   // returns false<br>
+}<br>
+}<br>
+</strong></p>
+<br>
+<br>
+
+</p><b>
+Java String equalsIgnoreCase()</b>: This method compares two string on the basis of content but it does not check the case like equals() method. 
+In this method, if the characters match, it returns true else false.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+public class EqualsIgnoreCaseExample{ <br>
+public static void main(String args[]){ <br>
+String s1="hello"; <br>
+String s2="HELLO"; <br>
+String s3="hi";<br>
+System.out.println(s1.equalsIgnoreCase(s2));   // returns true<br>
+System.out.println(s1.equalsIgnoreCase(s3));   // returns false<br>
+}}<br>
+</strong>
+In the above code, the first statement will return true because the content is same irrespective of the case.<br>
+ Then, in the second print statement will return false as the content doesn’t match in the respective strings.</p>
+<br>
+
+<br>
+
+<p><b>
+Java String toCharArray()</b>: This method converts the string into a character array i.e first it will calculate the length of the given Java String including spaces 
+and then create an array of char type with the same content.</p>
+<p><b>EXAMPLE</b></p>
+<p><strong>
+StringToCharArrayExample{<br>
+public static void main(String args[]){<br>
+String s1="Welcome to Edureka";<br>
+char[] ch=s1.toCharArray();<br>
+for(int i=0;i<ch.length;i++){ 
+<br>
+System.out.print(ch[i]);<br>
+}}}<br>
+</strong>
+The above code will return “Welcome to Edureka”.</p>
+
+<br><br>
+<br>
+
+
+
+<p><b>Java StringGetBytes() </b>: The Java string getBytes() method returns the sequence of bytes or you can say the byte array of the string.</p>
+<p><b>EXAMPLE</b></p>
+
+<p><strong>
+public class StringGetBytesExample {<br>
+public static void main(String args[]){ <br>
+String s1="ABC";<br>
+byte[] b=s1.getBytes();<br> 
+for(int i=0;i<b.length;i++){<br> 
+System.out.println(b[i]);<br>
+}<br>
+}}<br>
+</strong>
+In the above code, it will return the value 65,66,67.
+</p>
+<br>
+<br>
+<p><b>
+Java String IsEmpty() </b>: This method checks whether the String is empty or not. If the length of the String is 0, it returns true else false. For example: <br>
+<b>EXAMPLE</b></p>
+</p><strong>
+public class IsEmptyExample{<br>
+public static void main(String args[]) { <br>
+String s1=""; <br>
+String s2="hello";<br
+System.out.prinltn(s1.isEmpty());     // returns true <br>
+System.out.prinltn(s2.isEmpty());     // returns false<br>
+}}<br>
+</strong>
+In the above code, the first print statement will return true as it does not contain anything
+ while the second print statement will return false.</p>
+</p><b>
+Java String endsWith() </b>: The Java String endsWith() method checks if this string ends with the given suffix. If it returns with the given suffix, it will return true else returns false. For example:
+</p>
+<p><b>EXAMPLE</b></p>
+
+</p><strong>
+public class EndsWithExample{ <br>
+public static void main(String args[]) {<br>
+String s1="hello how are you”; <br>
+System.out.println(s1.endsWith("u"));       // returns true<br>
+System.out.println(s1.endsWith("you"));     // returns true   <br>
+System.out.println(s1.endsWith("how"));     // returns false<br>
+}}<br>
+</strong>
+
+
+</p>
+
+
+
+<p>CLICK below to learn COMPLETLY about string </p>
+   <p><a href="https://www.edureka.co/blog/java-string/">STRING</a> </p>
+
+</div>
+</body>
+</html>

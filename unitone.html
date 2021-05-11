@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UNIT1</title>
+  
+</head>
+<style >
+
+    nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:20px;
+      height: 100%;
+      width: 200px;
+      position: fixed;
+      z-index: 1;
+      top: 120px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 3px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+
+</style>
+
+
+  </head>
+    <header>
+     <H1><b>UNIT 1</b></p>
+    </header>
+    <p>             </p>
+  </head>
+  
+<body>
+<br>
+
+<div class="sidenav" >
+      <p><a href="#C1">OOPS CONCEPT </a></p>
+      <p><a href="#C2">INTRODUCTION TO JAVA </a></p>
+      <p><a href="#C3">JVM</a></p>
+      <p><a href="#C4">DATA TYPES AND VARIABLES</a></p>
+      <p><a href="#C5">CONTROL STATEMENTS</a></p>
+      <p><a href="#C6">CLASS AND OBJECTS</a></p>
+      <p><a href="#C7">INSTANCES AND INTIALISATION</a></p>
+      <p><a href="#C8">ARRAYS</a></p>
+      <p><a href="#C9">CONSTRUCTION AND DESTRUCTIONS</a></p>
+      <p><a href="#C10">GARBAGE COLLECTIONS</a></p>
+      <br>
+      <p><a href="index.html"><b>HOME</b></a></p>
+  </div>  
+<div class="main">
+       <footer>
+      <h2 id="C1">OOPS CONCEPT</h2>
+      </footer>  
+      <ul>
+        <ul>
+      <h1><b>oops</b></h1>
+        <p>oops is a approch it moderizing the program into modules,it contain data and function each data and function partitined memory area.<br>As templets  whenever acces data and function.</p>
+        <p><b>oops concepts</b></p>
+        <ul>
+           <li>Object</li>
+           <li>Class</li>
+           <li>Data Encapsulation</li>
+           <li>DATA Abstrsction</li> 
+           <li>Inheritance</li>
+           <li>Polymorphism</li>
+           </ul>
+
+
+        <p><b>Object</b></p>
+        <p>Object is an real time or run time entity.<br>That represent any as a object.<br>Object contains both states(Data member) & Behaviour(Member function).</p>
+        <img src="o.JPG" alt="object">
+        <p><b>Class</b></p>
+        <p>Collection of object is a class.<br>class is a blueprint for an object.</p>
+        <p>A class is a group of similar entity and function  bundeled together under a unit</p>
+
+        <p><b>Data Encapsulation</b></p>
+        <p>Wrapping up of data member and member function into a single unit is called <em>data encapsulation</em></p>
+        <p>It is used to protect the data function</p>
+        <img src="datae.JPG">
+
+        <p><b>DAta Abstraction</b></p>
+        <p>Showing (or) representing only the essential features without including the background detial or explanation.<br>hidding intrnal detials and showing esssential funtion is known as <strong>Data Abstraction</Strong>.<br>Looking he essential and ignore it.</p>
+        <p>eg: ATM,MOBILE<p>
+        <p><strong>By using Abstraction we will achive</Strong></p>
+        <ul>
+          <li>Security</li>
+          <li>Enhancement is very easy</li>
+          <li>Maintinability</li>
+        </ul>
+
+      <p><b>Inheritance</b></p>
+        <p>Interitance is a mechanism is which one class acquires the state and behavior of another class.<br> when onbe object acquires all the pro perty and behavior of a parent object it is known as<i> Inheritance</i></p>
+        <p><strong>Uses</strong></p>
+          <p>It provides code reuseability.<br>It is used to achive run time polymorphism.</p>
+        <p><strong>Types</strong></p>
+          <ul>
+            <li>Single</li>
+            <li>Multilevel</li>
+            <li>Hierarchical</li>
+            <li>Multiple</li>
+            <li>Hybrid</li>
+          </ul>
+
+
+         <img src="in1.JPG">
+         <img src="in2.JPG">
+
+
+      <p><b>Polymorphism</b></p>
+        <p>Is the ability of an object to tack on man forms.<br>If one task is performed in different ways it is known as <i>Polymorphism</i>.<br>it is process the information to one form to another form</p>
+
+      <img src="poly.JPG">
+
+      <H3<METHOD OVERLOADING</h3>
+      <p>same method name with a different argument</p>
+      <p>A class contain more than one method with same name but different number of argument with same number of arguments with different datatype<p>
+
+      <p><b>Program</b></p>
+      <p><strong>Class A<br>
+      {<br>
+        int add(int a,int b)<br>
+         {<br>
+            return(a+b);<br>
+        }<br>
+      }<br>
+      int add(int a,float b)<br>
+        {<br>
+         return(a+b);<br>
+        }<br>
+      }<br>
+      Public Static void main(String DK[])<br>
+      {<br>
+        A.obj=new A();<br>
+        System.out.println(obj.add(5,9.5f));<br>
+        obj.add(5,5)<br>
+      }</strong></p>
+       
+
+      <p><b>Over ridding</b></p>
+      <p>if a sub class has a same method as declared in the parent class is called method <i>Over riding</i></p>
+      <p><b>Rules</b></p>
+      <p>The sub class method nae should be same as a parent class method.<br>The method must have a same parameter as in the parent class</p>
+      <p><b>Use</b></p>
+      <p>It is used to provide the specific implementation of a method which is alredy provide by its Super class</p>
+
+      <p><b>Program</b></p>
+      <p><strong>Class A<br>
+      {<br>
+       void print()<br>
+       {<br>
+         System.out.println("Parent Class");<br>
+         }<br>
+      }<br>
+
+      Class B extends A<br>
+      {<br>
+        void print<br>
+        {<br>
+         System.out.println("Drevied class");<br>
+         }<br>
+       public static void main(String yk[])<br>
+      {<br>
+       A obj=new A();<br>
+       B obj1=new B();<br>
+       obj.print();<br>
+       obj1.print();<br>
+      }<br>
+      }</strong></p>
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+
+
+       <footer>
+      <h2 id="C2">INTRODUCTION TO JAVA </h2>
+        </footer>
+      <p> JAVA was developed by Sun Microsystems Inc in 1991, later acquired by Oracle Corporation.</p>
+       <p>It was developed by James Gosling and Patrick Naughton. </p>
+       <p>It is a simple programming language.  Writing, compiling and debugging a program is easy in java.  It helps to create modular programs and reusable code.</p>
+      <P><strong>Features of java </strong></p>
+        <ul>
+          <li>Simple</li>
+          <li>Object oriented</li>
+          <li>Robust</li>
+          <li>Portable</li>
+          <li>Platform inependent</li>
+          <li>Secure</li>
+          <li>Multithreaded</li>
+          <li>Architecture neutral</li>
+        </ul>
+       
+      <p><strong>Simple</Strong></p>
+      <p>It is very easy to learn and its syntax is simple and easy to understand .<br>Removed many complicated  features like : pointers and operator overloading.<br> rich pre-defined class library .<br>No need to remove unreferenced objects, because it has automatic garbage collection</p>
+
+
+      <p><strong>Object oriented</strong></p>
+      <p>focus on the data (objects) and methods manipulating the data.<br>Everything in java is an object.</p>
+
+      <p><strong>Robust</strong></p> 
+      <p>It uses strong memory management.</p>
+      <p>There is a lack of pointers that avoids security problems.</p>
+      <p>There is automatic garbage collection in java which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.</p>
+      <P>There are exception handling and the type checking mechanism in Java. All these points make Java robust.</p>
+
+      <p><strong>Portable</strong></p>
+      <P>Java is portable because it provides you to carry the bytecode to any platform.<br>java compiler generate byte-codes, not native machine code.<br>The compiled byte-codes are platform-independent.<br>same application runs on all platforms.</p>
+
+      <p><strong>Platform Independent</strong></p>
+      <p>H/W or S/W environment  in which a program runs.<br>Java code is compiled by the compiler and converted into byte code. This byte code is Platform Independent because it will run n any platform.</p>
+
+
+      <p><strong>Secure</strong></p>
+      <p>No explicit pointers.<br>memory allocation model is a major defense.<br>Java program run inside virtual machine.<br>access restrictions are forced (private, public)Class loader.<br>Byte code verifier.<br>Security manager.<br></p>
+
+      <p><strong>Multithreaded</strong></p>
+      <p>multiple concurrent threads of executions can run simultaneously.</p>
+
+      <p><strong>Architecture-neutral</strong></p>
+      <p>Java is architecture neutral because there are no implementation dependent features, for example, the size of primitive types is fixed.<br>In C programming,- Eg : int </p>
+
+
+
+
+
+
+      <footer>
+      <h2 id="C3">JVM</h2>
+      </footer>
+      <p>Java Virtual Machine (JVM) is a engine that provides runtime environment to drive the Java Code or applications. <br>
+      It converts Java bytecode into machines language. JVM is a part of Java Run Environment (JRE).<br>
+       In other programming languages, the compiler produces machine code for a particular system. However, Java compiler produces code for a Virtual Machine known as Java Virtual Machine.</p>
+
+      <p><b>How jvm works</b></p>
+        <p>First, Java code is complied into bytecode. This bytecode gets interpreted on different machines<br>Between host system and Java source, Bytecode is an intermediary language.
+      JVM is responsible for allocating memory space.</p>
+      <ul>
+        
+         </ul>
+
+      <img src="jvm.JPG">
+
+
+
+
+
+       <strong>JVM ARCHITECTURE</strong>
+        <p>  It contains
+             <ul> classloader</ul>
+             <ul> memory area</ul>
+             <ul> execution engine</ul> </p>
+
+
+       <img src="jvma.PNG">
+
+      <p><b>Class loader</b><br>
+      <p> The class loader is a subsystem used for loading class files. It performs three major functions viz. Loading, Linking, and Initialization.</p>
+      <p>
+
+         </p>
+      <p><b>Memory area</b></p>
+         </p>JVM Method Area stores class structures like metadata, the constant runtime pool, and the code for methods.<br>
+
+      <b> Heap</b><br>
+      All the Objects, their related instance variables, and arrays are stored in the heap. This memory is common and shared across multiple threads.<br>
+      <b> JVM language Stacks</b><br>
+      Java language Stacks store local variables, and it’s partial results. Each thread has its own JVM stack, created simultaneously as the thread is created.<br>
+       A new frame is created whenever a method is invoked, and it is deleted when method invocation process is complete.<br>
+
+      <b>  PC Registers</b><br>
+
+      PC register store the address of the Java virtual machine instruction which is currently executing. In Java, each thread has its separate PC register.<br>
+
+      <b> Native Method Stacks</b><br>
+
+      Native method stacks hold the instruction of native code depends on the native library. It is written in another language instead of Java.<br></p>
+
+      <p><b>Execution Engine</b></p>
+      <p>It is a type of software used to test hardware, software, or complete systems. The test execution engine never carries any information about the tested product.<br>
+
+      <b>Native Method interface</b><br>
+
+      The Native Method Interface is a programming framework. It allows Java code which is running in a JVM to call by libraries and native applications.<br>
+
+      <b> Native Method Libraries</b><br>
+
+      Native Libraries is a collection of the Native Libraries(C, C++) which are needed by the Execution Engine.<br></p>
+
+
+
+      <footer>
+      <h2 id="C4">DATA TYPES AND VARIABLES</h2>
+      </footer>
+      <p>Data types specify the different sizes and values that can be stored in the variable. There are two types of data types in Java:</p>
+       <ul>
+         <li><b>Primitive data types:</b> <br>The primitive data types include boolean, char, byte, short, int, long, float and double.</li>
+         <li><b>Non-primitive data types:</b> <br>The non-primitive data types include Classes, Interfaces, and Arrays.</li>
+       </ul>
+
+      <p><b>Java Primitive Data types</b></p>
+      <p>It will represent a type of data or variables.<br> The datatype reperesent decide the memory size.<i><br>eg:<br>int a=10;<br></i></p>
+      <p>There are 8  types<p>
+      <ul>
+        <li>boolean data type</li>
+        <li>byte data type</li>
+        <li>char data type</li>
+        <li>short data type</li>
+        <li>int data type</li>
+        <li>long data type</li>
+        <li>float data type</li>
+        <li>double data type</li>
+      </ul>
+      <img src="d.PNG">
+      <table>
+        <tr>
+          <th>Datatype</th>
+          <th>Size</th>
+          <th>Minimum Range</th>
+          <th>Maximum Range</th>
+          <th>Default</th>
+        </tr>
+        <tr>
+          <td>Byte</td>
+          <td>8</td>
+          <td>-128</td>
+          <td>+127</td>
+          <td>0</td>
+        </tr>
+        <tr>
+           <td>Short</td>
+          <td>16</td>
+          <td>-32768</td>
+          <td>+32767</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>int</td>
+          <td>32</td>
+          <td>-2147483648</td>
+          <td>+2147483647</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>long</td>
+          <td>64</td>
+          <td>-9223372036854775808</td>
+          <td>+9223372036854775807</td>
+           <td>0L</td>
+        </tr>
+        <tr>
+           <td>float</td>
+            <td>32</td>
+             <td>1.40E-45</td>
+              <td>3.4028234663853860983</td>
+               <td>00f</td>
+        </tr>
+        <tr>
+             <td>double</td>
+              <td>64</td>
+               <td>4.94065645841246544e-</td>
+                <td>1.797693134862315</td>
+                 <td>00d</td>
+        </tr>
+         <tr>
+            <td>char</td>
+            <td>16</td>
+             <td>324d</td>
+             <td>0f065,535</td>
+              <td>'\u0000'</td>
+          </tr>
+          <tr>
+             <td>boolean</td>
+              <td>7</td>
+             <td>NA</td>
+             <td>NA</td>
+             <td>false</td>
+          </tr>
+      </table>
+      <p>  </p>
+
+      <footer>
+      <h2 id="C5">16=8+8:CONTROL STATEMENTS</h2>
+      </footer>
+      <p><strong>Conditional Statement</strong></p>
+      <p>Conditional statements in a computer program support decisions based on a certain condition. <br>If the condition is met, or "true," a certain piece of code is executed.<br>it is used for testing the condition</p>
+      <ul>
+        <li>If</li>
+        <li>If else</li>
+        <li>Ladder</li>
+        <li>Nested if else</li>
+        <li>Switich</li>
+      </ul>
+
+      <p><b>If</b></p>
+      <p>The Java if statement tests the condition.<br>If the if condition is true the if block will be executed (It executes the if block if condition is true.)</p>
+      <p><strong>Syntax</strong></p>
+      <p>if(condition)<br>
+      {<br>
+        //code to be executed<br>
+      }</p>
+
+      <p><b>Program</b></p>
+      <p><strong>//Java Program to demonstate the use of if statement.<br>
+      public class IfExample {<br>
+      public static void main(String[] args) {<br>
+          //defining an 'age' variable<br>
+          int age=20;<br>
+          //checking the age<br>
+          if(age>18){<br>
+              System.out.print("Age is greater than 18");<br> 
+          }<br>
+      }<br>
+      }</strong></p>
+
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+
+
+      <p><b>If else</b></p>
+      <p>The Java if - else statement tests the conditions.<br> If the if condition is true the if block will be executed otherwise the else block will be executed. (It executes the if block if condition is true otherwise else block is executed.)</p>
+
+      <p><strong>Syntax</strong></p>
+
+      <p>if(condition)<br>{<br>code if condition is true<br>}<br>else<br>{<br>code if condition is false<br>}</p>
+
+      <p><b>Ladder if else</b></p>
+      <p>The if-else-if ladder statement executes one condition from multiple statements.<br>First if the first condition is true that true block will be executed. and if it false it will go and check next immediate If else block untill condition is getting true.</p>
+      <p><strong>Syntax</strong></p>
+      <p>if(condition1){<br>
+        //cod to be executed if condition1 is true<br>
+      }<br>
+      else if(condition2){<br>
+        //code to be executed if condition2 is true<br>
+      }<br>
+      else if(condition3){<br>  
+
+      //code to be executed if condition3 is true<br>
+      }<br>
+       else{<br>
+      //code to be executed if all the conditions are false<br>
+      }</p>
+
+      <p><b>PRogram</b></p>
+      <p><strong>//A Java Program to demonstrate the use of if-else statement.<br>  
+      //It is a program of odd and even number.<br>
+      public class IfElseExample {<br>
+      public static void main(String[] args) {<br>
+          //defining a variable<br>
+          int number=13;<br>
+          //Check if the number is divisible by 2 or not<br>  
+          if(number%2==0){<br> 
+              System.out.println("even number");<br>  
+          }else{<br>  
+              System.out.println("odd number");<br>  
+          }<br>
+      }<br>
+      }</strong></p>
+
+      <p><i>Program 2</i></p>
+      <p><strong>public class LeapYearExample {<br>    
+      public static void main(String[] args) {<br>
+          int year=2020;<br>
+          if(((year % 4 ==0) && (year % 100 !=0)) || (year % 400==0)){<br>  
+              System.out.println("LEAP YEAR");<br>
+          }<br>
+          else{<br>  
+              System.out.println("COMMON YEAR");<br> 
+          }<br>
+      }<br>
+      }</strong></p>
+
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+      <p><strong>Switch</strong></p>
+      <p>The Java switch expression must be of byte, short, int, long (with its Wrapper type), enums and string.<br>The case values must be unique. In case of duplicate value, it renders compile-time error.</p>
+      <p><b>Syntax</b></p>
+      <p>switch(expression)<br>
+      {<br>
+      case value1:<br>
+      //code to be executed;<br>
+        break; //optional<br>
+      case value2:<br>
+            //code to be executed;<br>
+       break;//optional<br>
+      ......<br>
+      defaul:<br>
+        code to be executed if all cases are not matched;<br>
+      }</p>
+
+      <p><b>Program</b></p>
+      <p><strong>public class SwitchExample {<br>  
+      public static void main(String[] args) {<br>
+          //Declaring a variable for switch expression<br>  
+          int number=20;<br>
+          //Switch expression<br>  
+          switch(number){<br>
+          //Case statements<br>
+          case 10: System.out.println("10");<br>  
+          break;<br>
+          case 20: System.out.println("20");<br>  
+          break;<br> 
+          case 30: System.out.println("30");<br>  
+          break;<br>  
+          //Default case statement<br>  
+          default:System.out.println("Not in 10, 20 or 30");<br>  
+          }<br>
+      }<br>
+      }</strong></p>
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+
+
+      <p><b>Looping</b></p>
+      <p>In programming languages, loops are used to execute a set of instructions/functions repeatedly when some conditions become true.<br>There are three types of loops in java.</p>
+       <ul>Types</p>
+           <li>For loop</li>
+            <li>while loop</li>
+            <li>do-while loop</li>
+      <p><strong>For loop</strong></p>
+      <p>The Java for loop is used to iterate a part of the program several times.</p>
+      <p>If the number of iteration is fixed, it is recommended to use for loop.</p>
+
+      <p><Strong>Syntax</strong></p>
+      <p>for(initialization; test condition; incr/decr)<br>
+      {<br>
+      //code to be executed<br>
+      }<br>
+
+      Syntax for infinitive loop:<br>
+      for(;;)<br>
+      {
+       <p>//code to be executed</p> 
+      }
+      <p><strong>While loop</strong></p>
+      </p>The Java while loop is used to iterate a part of the program several times.<br>If the number of iteration is not fixed, it is recommended to use while loop.</p>
+      <p><strong>Syntax</strong></p>
+      <p>while(condition)<br>
+      {<br>
+      //code to be executed<br>
+      }</p>
+
+      <p><b>program</b><p>
+      <p><b>public class WhileEx<br>
+      {<br>
+         public static void main(String[] args) {<br>
+        int i=1;<br>
+        while(i<=10)<br>
+        {<br>
+        System.out.println(i);<br>
+          i++;<br>
+        }<br>
+      }<br>
+      }</b></p>
+
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+
+
+
+      <p><Strong>Do-while</Strong></p>
+      <p>If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use do-while loop.</p>
+      <p><b>Syntax</b></p>
+      <p>do<br>
+      {<br>
+        //code to be executed<br>  
+      }while(condition);<br>
+
+      <p><b>program</b></p>
+      <p><b>public class DoWhileExample {<br>
+      public static void main(String[] args) {<br>
+        int i=1;<br>
+        do{<br>
+          System.out.println(i);<br>
+          i++;<br>
+      }while(i<=10);<br>
+      }<br>
+      }</b></p>
+
+      <p><b>2.Break</b></p>
+      <p>The Java break is used to break loop or switch statement. It breaks the current flow of the program at specified condition.<br>In case of inner loop, it breaks only inner loop.</p>
+
+
+      <p><b>2.Continue</b></p>
+      <p>The Java continue statement is used to continue the loop. It continues the current flow of the program and skips the remaining code at the specified condition.<br>In case of an inner loop, it continues the inner loop only.</p>
+
+
+
+
+
+
+
+      <footer>
+      <h2 id="C6">CLASS AND OBJECT</h2>
+      </footer>
+      <p>   </p>
+
+       <img src="c.PNG"  width="80%">   
+
+
+<br>
+<p>  </p>
+      <footer>
+      <h2 id="C7">INSTANCES AND INTIALISATION</h2>
+      </footer>
+      <p> there are three cases</p>
+      <p><b>CASE 1:</b></p>
+      <p> No values are initialized for instance variable.<br>if the no values are initalized for instance variable the default will be assigned for this variable</p>
+
+      <p><b>Program</b></p>
+      <p><strong>Class A<br>
+      {<br>
+       int a;<br>
+       int b;<br>
+      }<br>
+      Class B<br>
+      {<br>
+       Public Static void main(String ar[])<br>
+        {<br>
+          A.obj=new A();<br>
+          System.out.println(obj.a);<br>
+       }</strong></p>
+
+
+      <p><b>CASE 2:</b></p>
+      <p>Initialization by Instance method</p>
+
+      <p><b>Program</b></p>
+      <p><strong>Class A<br>
+      {<br>
+        int a;<br>
+        int b;<br>
+      Public void vk(int c,int d) <br>
+      {<br>
+        a=c;<br>
+        b=d;<br>
+         System.out.println(a);<br>
+         System.out.println(b);<br>
+      }<br>
+      }<br>
+      Class B<br>
+      {<br>
+        Public Static void main(String DK[])<br>
+          {<br>
+              A.obj=new A();<br>
+              obj.vk(2);<br>
+              obj.vk(3);<br>
+         }<br>
+      }</strong></p>
+
+
+      <p><b>CASE 3:</b></p>
+       <p>Initialization without using method </p>
+      <p><b>Program</b></p>
+      <p><strong>Class a<br>
+      {<br>
+         int a;<br>
+         float b;<br>
+         String c;<br>
+      }<br>
+       Public Static void main(String Yk[])<br>
+      {<br>
+        A.obj=new A();<br>
+        obj.a=10;<br>
+        obj.b=10.5;<br>
+        obj.c="THANKS TO Mr .R. VIKRAM SIR";<br>
+      System.out.println(obj.c);<br>
+      }</strong></p>
+
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+
+
+
+       
+      <footer>
+      <h2 id="C8">ARRAYS</h2>
+      </footer>
+      <p><b>Arrays</b></p>
+      <p></b> An arrayis acontainerobjectthat holdsafixednumberofvaluesofasingle type.<br>Whenan arrayis created,thelength ofan arrayis fixed.<br>Array elements are automatically initialized with the default value of their type, When an arrayis created.<br> Array can be created using the new keyword.</p>
+      <p><b>EX</b></p>
+      <p>int[] x =  new int[5]; // defining an integer array for 5 blocks</p>
+      <p><b>Arrays</b></p>
+      <p>Alternatively, we can create and initialize array as below format int[] x = {10, 20, 30}; int[] x = new int[]{10, 20, 30};<br>Here the length of  an array is determined by the number of values provided between {and} .<br>Thebuilt-inlengthpropertydeterminesthesize ofanyarray</p>
+      <p><b>EX:</b></p>
+      <p>int[] x = new int[10];<br>int x_len = x.length;</p>
+
+      <p><b>Program</b></p>
+      <p><b>public class ArrayDemo { public static void main(String[] args) { int[] x;<br>// declares an array of integers x = new int[5];<br>// allocates memory for 5integers x[0] = 11; X[4] = 22;<br>System.out.println("Element at index 0: " + x[0]);<br>System.out.println("Element at index 1: " + x[1]);<br> System.out.println("Element at index 4: " + x[4]);<br> }<br> }</b></p>
+      <p><b>Array Bounds, Array Resizing</b></p>
+      <p><p> Array subscripts begin with 0.<br> Can't access an array element beyond the range.<br>Can'tresize an array.<br>Can usethesamereferencevariabletorefer newarray</p>
+      <p><p>int x[] = new int [5];<br>x= new int [10];</p>
+
+
+      <p><b>Array copy</b></p>
+      <p>To copy array elements from one array to another array, we can use arraycopystatic method from System class.</p>
+      <p><b>Syntax:</b><p>
+      <p>public static void arraycopy(Object s,int sIndex,Object d,int dIndex,int lngth)</p>
+      <p><b>Ex:<br>
+      int source[] = {1, 2, 3, 4, 5, 6};<br>
+      int dest[] = new int[10];<br>
+      System.arraycopy(source,0, dest,0,source.length);<br></b></p>
+      <p><p><b>Program</b></p>
+      <p><p><b>public class ArrayLengthDemo<br>{ public static void main(String[] args)<br>{<br>// creates and initializes an array of integers<br>int[] source = {100, 200, 300};<br>// creates an integer array with 3 element <br>int[] dest = new int[3];<br> // copying an elements from source to dest array<br> System.arrayCopy(source, 0, dest, 0, source.length);<br>for(int i =0; i < dest.length; i++)<br>System.out.println("Element at index " + i + ": " + dest[i]);<br>}<br>}</b></p>
+
+      <p><b>Two-Dimensional Arrays</b></p>
+        <p> Two-dimensional arrays are arrays of arrays.<br>Initializing two-dimensional arrays:</p1>
+        <p><b>int[][] y = new int[3][3];</b><br>The 1st dimension represent rows or number of one dimension, the 2nd dimension represent columnsornumberofelementsin theeach one dimensions.<br>Thecurlybraces{}may also beusedto initialize two dimensional arrays.</p> 
+        <p>Ex1:<br>int[][] y = { {1,2,3}, {4,5,6}, {7,8,9} };<br>
+        int[][] y = new int[][] { {1,2,3}, {4,5,6}, {7,8,9} };<<p>
+
+         <p>Ex2:<br>int [][]x = new int [3][];<br>x[0] = new int[]{0,1,2,3};<br>x[1] = new int []{0,1,2};<br>x[2] = new int[]{0,1,2,3,4};</p>
+      <p><strong>Program</strong></p>
+            <p><strong>class TwoDimDemo<br>{<br>public static void main(String[] args)<br>{<br>int [][] x = new int[3][];<br>// initialize number of rows<br>x[0] = new int[3];<br>// define number of columns in each row<br>x[1] = new int[2];<br>x[2] = new int[5];<br>for(int i=0;  i < x.length; i++)<br>{<br>// print array elements<br>for (int j=0;  j < x[i].length;  j++)<br>{<br>x[i][j] = i;<br>System.out.print(x[i][j]);<br>}<br>System.out.println();<br>}<br>}<br>}</strong></p>
+
+      <footer>
+      <h2 id="C9">CONSTRUCTION AND DESTRUCTIONS</h2>
+      </footer>
+
+      <p>a constructor is a block of codes similar to the method.<br>Its special type of method that is used  to initialize the object.<br>It is called/ initialized when an object of the class is created. At the time of calling constructor, memory for the object is allocated in the memory.<br>It is called constructor because it constructs the values at the time of object creation.<br>It is not necessary to write a constructor for a class. It is because java compiler creates a default constructor if your class doesn't have any.</p>
+
+      <p><strong>Rules for defining Constructor</strong></p>
+      <p>Constructor name must be same as the class name.Constructor should not have any return type.<br>Class can contain more than one constructor.<br>constructor cannot be abstract, static, final, and synchronized.Its defined with any access specifier.</p>
+
+
+      <p><b>Types</b></p>
+          <ul>
+         <li>Default Constructor</li>
+         <li>Parameterized constructor</li>
+          </ul>
+      <p><b>Recursive</b></p>
+      <p>In which a method calls itself to solve some problem. A method that uses this technique is recursive.<br>Eg: Factorial.</p>
+
+      <p><b>Final</b></p>
+      <p>Its used with variable, methods and classes.<br>If a variable is declared as final It make that variable as constant.<br>Its value cannot be changed In a program.</p>
+       
+      <footer>
+      <h2 id="C10">8:GARBAGE COLLECTIONS</h2>
+      </footer>
+      <p>Main objective of Garbage Collector is to free heap memory by destroying unreachable objects.<br>In C/C++, programmer is responsible for both creation and destruction of objects. Usually programmer neglects destruction of useless objects. <br>Due to this negligence, at certain point, for creation of new objects, sufficient memory may not be available and entire program will terminate abnormally causing OutOfMemoryErrors.</p>
+      <P><strong>Advantage</strong></p>
+      <p>Make Java Memory efficient.<br>Automatically done by JVM.</p>
+
+      <img src="g.JPG">
+
+      <p><b>Note</b></p>
+      <p>The finalize() method called by Garbage Collector not JVM. Although Garbage Collector is one of the module of JVM.</p>
+
+
+      <p><strong>Finalize()</Strong></p>
+      <p>Just before destroying an object, Garbage Collector calls finalize().<br>method on the object to perform cleanup activities. <br>Once finalize() method completes, Garbage Collector destroys that object.<br>finalize() method is present in Object class with following prototype. </p>
+      <p>protected void finalize() throws Throwable.</p>
+
+      <p><strong>public class garb {<br>
+      public static void main(String[] args) {<br>
+      garb a=new garb();<br>
+      garb b=new garb();<br>
+      garb c=new garb();<br>
+      a=null;<br>
+      b=a;<br>
+      c=b;<br>
+      System.gc();<br>
+      System.out.println("hi ");<br>
+      }<br>
+      public void finalize()<br>
+      {<br>
+      System.out.println("hi i collected garbage");<br>
+      }<br>
+      }</strong></p>
+      <p><a href="https://www.jdoodle.com/online-java-compiler">TRY HERE</a></p>
+
+</div>
+</body>  
+</html>

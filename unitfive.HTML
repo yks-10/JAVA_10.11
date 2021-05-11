@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UNIT FIVE</title>
+
+<!-- CSS -->
+<style>
+ nav {
+      float:center;
+      width: 28%;
+      height: 150px; 
+      background: #ccc;
+      padding: 5px;
+    }
+    footer {
+      background-color:#adad85;
+      padding: 1px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    
+    
+    div.a {
+      text-align: center;
+    }
+
+    div.b {
+      text-align: left;
+    }
+
+    div.c {
+      text-align: right;
+    } 
+
+    div.d {
+      text-align: justify;
+    } 
+    a:link,a:visited{
+    
+    color:BLACK;
+    padding:15px*25px;
+    text-decording:none;
+    display:inline-block;
+    }
+    a:hover,a:active{
+     background-color:lightyellow;
+    }
+
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 4px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+  {
+      box-sizing: border-box;
+    }
+  .sidenav {
+      padding-top:20px;
+      height: 100%;
+      width: 220px;
+      position: fixed;
+      z-index: 1;
+      top: 97px;
+      left: 10;
+      background-color: lightgreen;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .main {
+        margin-left: 200px; 
+        font-size: 20px; 
+        padding: 0px 10px;
+      }
+  header {
+    
+      background-color:green;
+      padding: 3px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+</style>
+</head>
+<header>
+ <H1><b>UNIT 5</b></p>
+</header>
+<p>             </p>
+<body>
+<!-- HTML -->
+<div class="sidenav">
+  <div class="myBox">
+      <p><a href="#C1">THE APPLET CLASS </a></p>
+      <p><a href="#C2">BASIC OF EVENT HANDLING</a></p>
+      <p><a href="#C3">DELICATION EVENT MODEL</a></p>
+      <p><a href="#C4">EVENT CLASSES</a></p>
+      <p><a href="#C5">EVENT LISTENER INTERFACE</a></p>
+      <p><a href="#C6">ADOPTED CLASS</a></p>
+      <p><a href="#C7">AWT</a></p>
+      <br>
+      <p><a href="index.html"><b>HOME</b></a></p>
+  </div>
+</div>
+<div.c>
+<div class="main">
+<footer>
+<h2 id="C1">APPLET CLASS</h2>
+</footer>
+<ul>
+  <ul>
+
+<h1 ><b>Applet</b></h1>
+<p>
+An applet is a Java program that runs in a Web browser. An applet can be a fully functional Java application because it has the entire Java API at its disposal.<br>
+<br>
+There are some important differences between an applet and a standalone Java application, including the following −
+<li>
+An applet is a Java class that extends the java.applet.Applet class.
+<li>
+A main() method is not invoked on an applet, and an applet class will not define main().
+<li>
+Applets are designed to be embedded within an HTML page.
+<li>
+When a user views an HTML page that contains an applet, the code for the applet is downloaded to the user's machine.
+<li>
+A JVM is required to view an applet. The JVM can be either a plug-in of the Web browser or a separate runtime environment.
+<li>
+The JVM on the user's machine creates an instance of the applet class and invokes various methods during the applet's lifetime.
+<li>
+Applets have strict security rules that are enforced by the Web browser. The security of an applet is often referred to as sandbox security, comparing the applet to a child playing in a sandbox with various rules that must be followed.
+<li>
+Other classes that the applet needs can be downloaded in a single Java Archive (JAR) file.
+</li>
+<h1 ><b>Life Cycle of an Applet</b></h1>
+<br>
+<img src="ap.png">
+<p>  </p>
+<br>
+Four methods in the Applet class gives you the framework on which you build any serious applet −
+<p>  </p>
+<br><b>init</b> − This method is intended for whatever initialization is needed for your applet. It is called after the param tags inside the applet tag have been processed.
+
+<br><b>start</b> − This method is automatically called after the browser calls the init method. It is also called whenever the user returns to the page containing the applet after having gone off to other pages.
+
+<br><b>stop</b> − This method is automatically called when the user moves off the page on which the applet sits. It can, therefore, be called repeatedly in the same applet.
+
+<br><b>destroy</b> − This method is only called when the browser shuts down normally. Because applets are meant to live on an HTML page, you should not normally leave resources behind after a user leaves the page that contains the applet.
+
+<br><b>paint</b> − Invoked immediately after the start() method, and also any time the applet needs to repaint itself in the browser. The paint() method is actually inherited from the java.awt.
+
+<br><br>A "Hello, World" Applet
+<br>
+Following is a simple applet named HelloWorldApplet.java −
+<strong>
+<p>
+import java.applet.*;<br>
+import java.awt.*;<br>
+
+public class HelloWorldApplet extends Applet<br>
+ {<br>
+   public void paint (Graphics g)<br>
+ {<br>
+      g.drawString ("Hello World", 25, 50);<br>
+   }<br>
+}<br>
+</p>
+</strong>
+These import statements bring the classes into the scope of our applet class −
+<br>
+<br>java.applet.Applet
+<br>java.awt.Graphics<br>
+<br>Without those import statements, the Java compiler would not recognize the classes Applet and Graphics, which the applet class refers to.
+<br>
+<br>
+Every applet is an extension of the java.applet.Applet class. The base Applet class provides methods that a derived Applet class may call to obtain information and services from the browser context.
+<br><br>
+These include methods that do the following −
+<br>
+<li>Get applet parameters<br>
+<li>Get the network location of the HTML file that contains the applet
+<br><li>Get the network location of the applet class directory
+<br><li>Print a status message in the browser
+<br><li>Fetch an image
+<br><li>Fetch an audio clip
+<br><li>Play an audio clip
+<br><li>Resize the applet<br><br>
+
+<br>
+<b>To Display Smiley</b>
+<strong>
+<p>
+import java.applet.Applet;<br>
+import java.awt.*;<br>
+ 
+public class SmileyExc extends Applet {<br>
+ 
+ public void paint(Graphics g) {<br>
+  
+  g.setColor(Color.yellow);<br>
+  g.fillOval(20,20,150,150);   // For face<br>
+  g.setColor(Color.black);<br>
+  g.fillOval(50,60,15,25);     // Left Eye <br>
+  g.fillOval(120,60,15,25);    // Right Eye<br>
+  int x[] = {95,85,106,95};<br>
+  int y[] = {85,104,104,85};<br>
+  g.drawPolygon(x, y, 4);      // Nose<br>
+  g.drawArc(55,95,78,50,0,-180);  // Smile<br>
+  g.drawLine(50,126,60,116);   // Smile arc1<br>
+  g.drawLine(128,115,139,126);  // Smile arc2<br>
+ }<br>
+}<br>
+</p></strong>
+<img src="s.png">
+</p>
+<footer>
+<h2 id="C2">BASIC OF EVENT HANDLING</h2>
+</footer>
+
+<h1>Event Handling</h1>
+
+</b><br><li>Changing the state of an object is known as an event. For example, click on button, dragging mouse etc. <br><li>The java.awt.event package provides many event classes and Listener interfaces for event handling.
+
+<br><li>In order to react to an event, an applet must override the appropriate event-specific method.
+
+<br><li>Initially, the applet will display "initializing the applet. Starting the applet." Then once you click inside the rectangle, "mouse clicked" will be displayed as well.
+Displaying Images
+<br><li>An applet can display images of the format GIF, JPEG, BMP, and others.
+<br><li>To display an image within the applet, you use the drawImage() method found in the java.awt.Graphics class.
+<br>
+<img src="scjpg.png" >
+<br>
+
+<footer>
+<h2 id="C3">DELICATION EVENT MODEL</h2>
+</footer>
+
+<h1><b>Delication event model</b></h1>
+<li>In the Delegation event model, a class designated as an event source generates an event and sends it to one or more listeners. 
+<br><li>The responsibility of handling the event process is handed over to its listeners.This means that a particular event is processed only by a specific listener
+<br><li>Events: The event object defines the change in state in the event source class. For example, interacting with the graphical interfaces, such as clicking a button or entering text via keyboard in a text box, item selection in a list, all represent some sort of change in the state. The event object is used to carry the required information about the state change.s
+<br><li>Event sources: Event sources are objects that cause the events to occur due to some change in the property of the component. Because there can be various types a component can trigger, each must be registered to a listener to provide a suitable response.
+<br><li>Event listeners: Event listeners are objects that are notified as soon as a specific event occurs. <br><li>Event listeners must define the methods to process the notification they are interested to receive.
+<br>
+<img src="de.jpg">
+<br>
+<br>
+<br>
+<img src="Ca.png" height="500" width="50%">
+<footer>
+<h2 id="C4">EVENT CLASSES</h2>
+</footer>
+<br>It is the root class from which all event state objects shall be derived. All Events are constructed with a reference to the object, the source, that is logically deemed to be the object upon which the Event in question initially occurred upon.This class is defined in java.util package.<br>
+<br>Event classes are the classes that represent events at the core of java's event handling mechanism. Here, src is the objects that generates the event. <br>EventObjectcontains two objects: getSource() and toString(). toString()method returns the string equivalent of the event
+<p>  </p>
+<img src="eve.jpg" width="50%">
+<br><b>Example program</b><br>
+<pre>import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+import java.applet.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class Test extends Applet implements KeyListener
+{
+	String msg="";
+	public void init()
+	{
+		addKeyListener(this);
+	}
+	public void keyPressed(KeyEvent k)
+	{
+		showStatus("KeyPressed");
+	}
+	public void keyReleased(KeyEvent k)
+	{
+		showStatus("KeyRealesed");
+	}
+	public void keyTyped(KeyEvent k)
+	{
+		msg = msg+k.getKeyChar();
+		repaint();
+	}
+	public void paint(Graphics g)
+	{
+		g.drawString(msg, 20, 40);
+	}
+}</pre>
+<br>
+
+<footer>
+<h2 id="C5">EVENT LISENER INTERFACE</h2>
+</footer>
+<h1><b>Event listener</b></h1>
+he Event listeners represent the interfaces which are responsible to handle a particular event.
+
+Java have provided us various Event listeners classes and Every method of an event listener  has a single and only argument  as an object which is the subclass of EventObject class.
+
+For example- the mouse event listener method will accept all instances of MouseEvent, where MouseEvent derived from the EventObject.
+
+The EventListner interface is a interface where every listener interface has to be extend.
+
+This class is defined in the java.util package.
+
+Class declaration
+
+The Following is the declaration for java.util.EventListener interface as
+
+public interface EventListener
+<img src="EL.png">
+<br><b>Example program</b><br>
+<pre>
+import java.awt.*;  
+import java.awt.event.*;  
+class AEvent extends Frame implements ActionListener{  
+TextField tf;  
+AEvent(){  
+  
+//create components  
+tf=new TextField();  
+tf.setBounds(60,50,170,20);  
+Button b=new Button("click me");  
+b.setBounds(100,120,80,30);  
+  
+//register listener  
+b.addActionListener(this);//passing current instance  
+  
+//add components and set size, layout and visibility  
+add(b);add(tf);  
+setSize(300,300);  
+setLayout(null);  
+setVisible(true);  
+}  
+public void actionPerformed(ActionEvent e){  
+tf.setText("Welcome");  
+}  
+public static void main(String args[]){  
+new AEvent();  
+}  
+}
+</pre>
+<b>Output</b>
+<br>
+<img src="ev.jpg">
+
+<br>
+<footer>
+<h2 id="C6">ADOPTED CLASS</h2>
+</footer>
+<h1 style="color:#ff0000";><b>Adopted class</b></h1>
+<br><li>java adapter classes provide the default implementation of listener interfaces.<br><li>If you inherit the adapter class, you will not be forced to provide the implementation of all the methods of listener interfaces. So it saves code.</li>
+
+<br><li>The adapter classes are found in java.awt.event, java.awt.dnd and javax.swing.event packages. <br>The Adapter classes with their corresponding listener interfaces</li>
+<br>
+<img src="add.png" width="600" height="300">
+<br>
+<footer>
+<h2 id="C7">AWT</h2>
+</footer>
+<h1><b>Awt</b></h1>
+<br><li>java AWT (Abstract Window Toolkit) is an API to develop GUI or window-based applications in java.
+
+<br><li>Java AWT components are platform-dependent i.e. components are displayed according to the view of operating system. <br><li>AWT is heavyweight i.e. its components are using the resources of OS.
+
+<br><li>The java.awt package provides classes for AWT api such as TextField, Label, TextArea, RadioButton, CheckBox, Choice, List etc.
+
+Java AWT (Abstract Window Toolkit) is an API to develop GUI or window-based applications in java.
+
+Java AWT components are platform-dependent i.e. components are displayed according to the view of operating system. AWT is heavyweight i.e. its components are using the resources of OS.
+
+The java.awt package provides classes for AWT api such as TextField, Label, TextArea, RadioButton, CheckBox, Choice, List etc.
+
+
+<br><b>Java AWT Hierarchy</b><br>
+ 
+<br><b>Container</b>
+<br>The Container is a component in AWT that can contain another components like buttons, textfields, labels etc. The classes that extends Container class are known as container such as Frame, Dialog and Panel.
+<br>
+<br><b>Window</b>
+The window is the container that have no borders and menu bars. You must use frame, dialog or another window for creating a window.
+<br>
+<br><b>Panel</b>
+<br>The Panel is the container that doesn't contain title bar and menu bars. It can have other components like button, textfield etc.
+<br>
+<br><b>Frame</b>
+<br>The Frame is the container that contain title bar and can have menu bars. It can have other components like button, textfield etc.
+<br><br>
+<b>Calculator program</b>
+<br>
+<pre>
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.TextEvent;
+import java.awt.event.TextListener;;
+public class calculator extends Applet implements ActionListener, TextListener
+
+{
+ String s,s1,s2,s3,s4;
+ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0;
+ Button add,sub,eq,cl,mul,div;
+ TextField t1;
+ int a,b,c;
+ 
+ public void init()
+ {
+  t1=new TextField(10);
+  b1=new Button("1");
+  b2=new Button("2");
+  b3=new Button("3");
+  b4=new Button("4");
+  b5=new Button("5");
+  b6=new Button("6");
+  b7=new Button("7");
+  b8=new Button("8");
+  b9=new Button("9");
+  b0=new Button("0");
+  add=new Button("+");
+  sub=new Button("-");
+  mul=new Button("*");
+  div=new Button("/");
+  eq=new Button("=");
+  cl=new Button("Clear");
+  
+  
+  
+  GridLayout gb=new GridLayout(4,5);
+  setLayout(gb);
+  
+
+  add(t1);
+  add(b1);
+  add(b2);
+  add(b3);
+  add(b4);
+  add(b5);
+  add(b6);
+  add(b7);
+  add(b8);
+  add(b9);
+  add(b0);
+  add(add);
+  add(sub);
+  add(mul);
+  add(div);
+  add(eq);
+  add(cl);
+  
+  b1.addActionListener(this);
+  b2.addActionListener(this);
+  b3.addActionListener(this);
+  b4.addActionListener(this);
+  b5.addActionListener(this);
+  b6.addActionListener(this);
+  b7.addActionListener(this);
+  b8.addActionListener(this);
+  b9.addActionListener(this);
+  b0.addActionListener(this);
+  add.addActionListener(this);
+  sub.addActionListener(this);
+  mul.addActionListener(this);
+  div.addActionListener(this);
+  eq.addActionListener(this);
+  cl.addActionListener(this);
+  paint();
+  //t1.addTextListener(this);
+ }
+ public void paint()
+ {
+  setBackground(Color.green);
+ }
+ 
+ public void actionPerformed(ActionEvent e)
+ {
+  s=e.getActionCommand();
+  if(s.equals("0")||s.equals("1")||s.equals("2")||
+s.equals("3")||s.equals("4")||s.equals("5")||s.equals("6")||s.equals("7")||s.equals("8")||
+s.equals("9")||s.equals("0"))
+  {
+   s1=t1.getText()+s;
+   t1.setText(s1);
+  }
+  if(s.equals("+"))
+  {
+     s2=t1.getText();
+     t1.setText("");
+     s3="+";
+  }
+  if(s.equals("-"))
+  {
+     s2=t1.getText();
+     t1.setText("");
+     s3="-";
+  }
+  if(s.equals("*"))
+  {
+     s2=t1.getText();
+     t1.setText("");
+     s3="*";
+  }
+  if(s.equals("*"))
+  {
+     s2=t1.getText();
+     t1.setText("");
+     s3="*";
+  }
+  if(s.equals("="))
+  {
+   s4=t1.getText();
+   a=Integer.parseInt(s2);
+   b=Integer.parseInt(s4);
+   if(s3.equals("+"))
+    c=a+b;
+   if(s3.equals("-"))
+    c=a-b;
+   
+   t1.setText(String.valueOf(c));
+  }
+  if(s.equals("Clear"))
+  {
+   t1.setText("");
+  }
+ }
+ public void textValueChanged(TextEvent e)
+ {
+  
+ }
+}
+
+</pre>
+<br>
+<b>Output</b>
+<br>
+<img src="clc.png">
+</div>
+</body>
+</html>
